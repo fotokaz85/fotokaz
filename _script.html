@@ -1,0 +1,25 @@
+<script>
+var btn=document.querySelector('.menu-btn'), links=document.querySelector('.links');
+if(btn) btn.addEventListener('click',function(){links.classList.toggle('open');});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+var imgs=[].slice.call(document.querySelectorAll('.masonry .item img'));
+if(imgs.length){
+  var lb=document.createElement('div');lb.className='lb';
+  lb.innerHTML='<span class="x">&times;</span><span class="nav-arrow prev">&#8249;</span><img alt=""><span class="nav-arrow next">&#8250;</span>';
+  document.body.appendChild(lb);
+  var li=lb.querySelector('img'),idx=0;
+  var show=function(i){idx=(i+imgs.length)%imgs.length;li.src=imgs[idx].src;};
+  imgs.forEach(function(im,i){im.parentElement.addEventListener('click',function(ev){ev.preventDefault();show(i);lb.classList.add('open');});});
+  lb.querySelector('.x').onclick=function(){lb.classList.remove('open');};
+  lb.querySelector('.prev').onclick=function(ev){ev.stopPropagation();show(idx-1);};
+  lb.querySelector('.next').onclick=function(ev){ev.stopPropagation();show(idx+1);};
+  lb.addEventListener('click',function(ev){if(ev.target===lb)lb.classList.remove('open');});
+  document.addEventListener('keydown',function(ev){if(!lb.classList.contains('open'))return;if(ev.key==='Escape')lb.classList.remove('open');if(ev.key==='ArrowLeft')show(idx-1);if(ev.key==='ArrowRight')show(idx+1);});
+}
+var cf=document.getElementById('cform');
+if(cf){cf.addEventListener('submit',function(e){e.preventDefault();
+  var body='Imię: '+cf.name.value+'%0D%0AE-mail: '+cf.email.value+'%0D%0A%0D%0A'+cf.msg.value;
+  window.location.href='mailto:m_kazmieruk@10g.pl?subject='+encodeURIComponent('Zapytanie ze strony fotokaz')+'&body='+body;
+});}
+</script>

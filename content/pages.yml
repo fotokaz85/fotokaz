@@ -1,0 +1,56 @@
+index.html:
+  title_pl: "Marcin Kaźmieruk — fotograf kulinarny, eventowy i komercyjny · Jelenia Góra"
+  desc_pl: "Fotograf kulinarny, biznesowy, eventowy, teatralny i ślubny. #1 na świecie Foodelia 2025, nagrody IPA 2026. Zdjęcia bez Photoshopa i AI. Jelenia Góra i cała Polska."
+  title_en: "Marcin Kaźmieruk — Food, Event & Commercial Photographer · Poland"
+  desc_en: "Food, business, event, theatre and wedding photographer. #1 in the world at Foodelia 2025, IPA 2026 awards. Photography without Photoshop or AI. Poland, working worldwide."
+kulinarna.html:
+  title_pl: "Fotografia kulinarna — zdjęcia potraw i dań | Marcin Kaźmieruk"
+  desc_pl: "Profesjonalna fotografia kulinarna. #1 na świecie Foodelia 2025. Zdjęcia potraw, restauracji i menu, które sprzedają. Jelenia Góra, Wrocław, cała Polska."
+  title_en: "Food Photography — dishes, restaurants, menus | Marcin Kaźmieruk"
+  desc_en: "Professional food photography. #1 in the world at Foodelia 2025. Photos of dishes, restaurants and menus that sell. Based in Poland, working across Europe."
+biznes.html:
+  title_pl: "Fotografia biznesowa i wizerunkowa | Marcin Kaźmieruk"
+  desc_pl: "Fotografia biznesowa, portrety wizerunkowe, wnętrza i realizacje dla marek. Buduj zaufanie od pierwszego spojrzenia. Jelenia Góra i cała Polska."
+  title_en: "Business & Brand Photography | Marcin Kaźmieruk"
+  desc_en: "Corporate and brand photography, headshots, interiors and campaigns. Build trust at first glance. Based in Poland, working across Europe."
+hotele.html:
+  title_pl: "Fotografia wnętrz i hoteli | Marcin Kaźmieruk"
+  desc_pl: "Fotografia wnętrz hotelowych, restauracji i przestrzeni komercyjnych. Kadry, które sprzedają pobyt. Jelenia Góra i cała Polska."
+  title_en: "Hotel & Interior Photography | Marcin Kaźmieruk"
+  desc_en: "Hotel, restaurant and commercial interior photography. Frames that sell the stay. Based in Poland, working across Europe."
+wydarzenia.html:
+  title_pl: "Fotografia eventowa — festiwale, koncerty, gale | Marcin Kaźmieruk"
+  desc_pl: "Fotografia eventowa: festiwale, koncerty, gale i wydarzenia firmowe. Oficjalny fotograf Beats for Love od 2017. Energia sceny w każdym kadrze."
+  title_en: "Event Photography — festivals, concerts, galas | Marcin Kaźmieruk"
+  desc_en: "Event photography: festivals, concerts, galas and corporate events. Official Beats for Love photographer since 2017. The energy of the stage in every frame."
+teatr.html:
+  title_pl: "Fotografia teatralna — spektakle i próby | Marcin Kaźmieruk"
+  desc_pl: "Fotografia teatralna: spektakle, próby i festiwale. Światło, gest i napięcie sceny uchwycone naturalnie, bez inscenizacji."
+  title_en: "Theatre Photography — performances & rehearsals | Marcin Kaźmieruk"
+  desc_en: "Theatre photography: performances, rehearsals and festivals. Light, gesture and stage tension captured naturally."
+sluby.html:
+  title_pl: "Fotografia ślubna — reportaż z całego dnia | Marcin Kaźmieruk"
+  desc_pl: "Fotografia ślubna wśród najlepszych na świecie. Stypendysta Two Mann Studios, nagrody PSKŚ. Reportaż pełen emocji, bez ustawianych scen. Jelenia Góra i cała Polska."
+  title_en: "Wedding Photography — full-day storytelling | Marcin Kaźmieruk"
+  desc_en: "Wedding photography among the world's best. Two Mann Studios scholarship, PSKŚ awards. Honest, emotional storytelling, no staged scenes. Poland and abroad."
+wyroznienia.html:
+  title_pl: "Nagrody i wyróżnienia | Marcin Kaźmieruk Fotografia"
+  desc_pl: "Nagrody i wyróżnienia: #1 Foodelia 2025, IPA 2026, Flash Masters, stypendium Two Mann Studios, Osobowość Roku Jelenia Góra."
+  title_en: "Awards & Recognition | Marcin Kaźmieruk Photography"
+  desc_en: "Awards and recognition: #1 Foodelia 2025, IPA 2026, Flash Masters, Two Mann Studios scholarship, Personality of the Year Jelenia Góra."
+o-mnie.html:
+  title_pl: "O mnie — Marcin Kaźmieruk, fotograf z Jeleniej Góry"
+  desc_pl: "Fotograf z kilkunastoletnim stażem. Kulinaria, biznes, wydarzenia, teatr i śluby. Zdjęcia bez Photoshopa i AI. Pracuję po polsku i angielsku."
+  title_en: "About — Marcin Kaźmieruk, photographer from Poland"
+  desc_en: "Photographer with over a decade of experience. Food, business, events, theatre and weddings. Photos without Photoshop or AI. I work in Polish and English."
+kontakt.html:
+  title_pl: "Kontakt | Marcin Kaźmieruk Fotografia · Jelenia Góra"
+  desc_pl: "Skontaktuj się: e-mail, telefon, social media. Wycena indywidualna pod projekt i budżet. Jelenia Góra, cała Polska i zagranica."
+  title_en: "Contact | Marcin Kaźmieruk Photography · Poland"
+  desc_en: "Get in touch: email, phone, social media. Individual quote per project and budget. Poland and international bookings welcome."
+prywatnosc.html:
+  noindex: true
+  title_pl: "Polityka prywatności | Marcin Kaźmieruk Fotografia"
+  desc_pl: "Polityka prywatności serwisu fotokaz.pl."
+  title_en: "Privacy Policy | Marcin Kaźmieruk Photography"
+  desc_en: "Privacy policy of fotokaz.pl."

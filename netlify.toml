@@ -1,0 +1,7 @@
+# Netlify uruchamia to przy każdej zmianie w panelu i publikuje folder public/
+[build]
+  command = "pip install beautifulsoup4 pyyaml && python3 build.py"
+  publish = "public"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"

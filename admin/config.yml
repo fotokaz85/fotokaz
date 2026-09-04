@@ -1,0 +1,91 @@
+# Konfiguracja panelu edycji (Sveltia CMS).
+# UWAGA: pole "repo" ustawimy razem na Twoją nazwę na GitHubie.
+backend:
+  name: github
+  repo: fotokaz85/fotokaz
+  branch: main
+
+media_folder: "images"            # gdzie panel trzyma zdjęcia
+public_folder: "/images"          # jak zdjęcia są widoczne na stronie
+
+locale: pl
+
+collections:
+  - name: teksty
+    label: "Teksty na stronie"
+    files:
+      - name: opinie
+        label: "Opinie i oceny"
+        file: "content/site.yml"
+        fields:
+          - label: "Plakietka z oceną (PL)"
+            name: reviews_badge
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "Opinia 1 — treść"
+            name: review1_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinia 2 — treść"
+            name: review2_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinia 3 — treść"
+            name: review3_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis galerii — Kulinarna"
+            name: cap_kulinarna
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis galerii — Biznes"
+            name: cap_biznes
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis galerii — Wydarzenia"
+            name: cap_wydarzenia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis galerii — Teatr"
+            name: cap_teatr
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis galerii — Śluby"
+            name: cap_sluby
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis galerii — Hotele"
+            name: cap_hotele
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+
+  - name: media
+    label: "Zdjęcia"
+    label_singular: "Zdjęcie"
+    description: "Podmiana zdjęć: wgraj plik pod tą samą nazwą co stary, żeby zastąpić go na stronie."
+    files:
+      - name: info
+        label: "Jak zarządzać zdjęciami"
+        file: "content/_media_info.yml"
+        fields:
+          - { label: "Notatka", name: notatka, widget: text, required: false }
