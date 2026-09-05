@@ -1,91 +1,238 @@
-# Konfiguracja panelu edycji (Sveltia CMS).
-# UWAGA: pole "repo" ustawimy razem na Twoją nazwę na GitHubie.
+# Panel edycji fotokaz.pl (Sveltia CMS)
 backend:
   name: github
   repo: fotokaz85/fotokaz
   branch: main
 
-media_folder: "images"            # gdzie panel trzyma zdjęcia
-public_folder: "/images"          # jak zdjęcia są widoczne na stronie
+media_folder: "images"
+public_folder: "/images"
 
 locale: pl
 
 collections:
   - name: teksty
-    label: "Teksty na stronie"
+    label: "Teksty strony"
     files:
-      - name: opinie
-        label: "Opinie i oceny"
+      - name: wszystkie
+        label: "Wszystkie teksty"
         file: "content/site.yml"
         fields:
-          - label: "Plakietka z oceną (PL)"
-            name: reviews_badge
+          - label: "Strona główna — górna linijka nad tytułem"
+            name: hero_kicker
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: string }
               - { label: "Angielski", name: en, widget: string }
-          - label: "Opinia 1 — treść"
-            name: review1_quote
+          - label: "Strona główna — podtytuł pod tytułem"
+            name: hero_sub
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
-          - label: "Opinia 2 — treść"
-            name: review2_quote
+          - label: "O mnie (strona główna) — akapit 1"
+            name: about_p1
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
-          - label: "Opinia 3 — treść"
-            name: review3_quote
+          - label: "O mnie (strona główna) — akapit 2"
+            name: about_p2
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
-          - label: "Opis galerii — Kulinarna"
+          - label: "W skrócie — punkt 1"
+            name: fact1
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 2"
+            name: fact2
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 3"
+            name: fact3
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 4"
+            name: fact4
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 5"
+            name: fact5
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 6"
+            name: fact6
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "Podtytuł strony — Kulinarna"
+            name: sub_kulinarna
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Biznes"
+            name: sub_biznes
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Hotele"
+            name: sub_hotele
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Wydarzenia"
+            name: sub_wydarzenia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Teatr"
+            name: sub_teatr
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Śluby"
+            name: sub_sluby
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Kulinarna"
             name: cap_kulinarna
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
-          - label: "Opis galerii — Biznes"
+          - label: "Opis nad galerią — Biznes"
             name: cap_biznes
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
-          - label: "Opis galerii — Wydarzenia"
-            name: cap_wydarzenia
-            widget: object
-            fields:
-              - { label: "Polski", name: pl, widget: text }
-              - { label: "Angielski", name: en, widget: text }
-          - label: "Opis galerii — Teatr"
-            name: cap_teatr
-            widget: object
-            fields:
-              - { label: "Polski", name: pl, widget: text }
-              - { label: "Angielski", name: en, widget: text }
-          - label: "Opis galerii — Śluby"
-            name: cap_sluby
-            widget: object
-            fields:
-              - { label: "Polski", name: pl, widget: text }
-              - { label: "Angielski", name: en, widget: text }
-          - label: "Opis galerii — Hotele"
+          - label: "Opis nad galerią — Hotele"
             name: cap_hotele
             widget: object
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Wydarzenia"
+            name: cap_wydarzenia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Teatr"
+            name: cap_teatr
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Śluby"
+            name: cap_sluby
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinie — plakietka z oceną"
+            name: reviews_badge
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "Opinie — cytat 1"
+            name: review1_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinie — cytat 2"
+            name: review2_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinie — cytat 3"
+            name: review3_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
 
-  - name: media
-    label: "Zdjęcia"
-    label_singular: "Zdjęcie"
-    description: "Podmiana zdjęć: wgraj plik pod tą samą nazwą co stary, żeby zastąpić go na stronie."
+  - name: galerie
+    label: "Galerie zdjęć"
+    description: "Dodawaj, usuwaj i przeciągaj zdjęcia. Kolejność na liście = kolejność na stronie."
     files:
-      - name: info
-        label: "Jak zarządzać zdjęciami"
-        file: "content/_media_info.yml"
+      - name: wszystkie
+        label: "Zdjęcia w galeriach"
+        file: "content/galleries.yml"
         fields:
-          - { label: "Notatka", name: notatka, widget: text, required: false }
+          - label: "Galeria — Kulinarna"
+            name: kulinarna
+            widget: list
+            allow_add: true
+            summary: "{{fields.image}}"
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+          - label: "Galeria — Biznes"
+            name: biznes
+            widget: list
+            allow_add: true
+            summary: "{{fields.image}}"
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+          - label: "Galeria — Hotele"
+            name: hotele
+            widget: list
+            allow_add: true
+            summary: "{{fields.image}}"
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+          - label: "Galeria — Wydarzenia"
+            name: wydarzenia
+            widget: list
+            allow_add: true
+            summary: "{{fields.image}}"
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+          - label: "Galeria — Teatr"
+            name: teatr
+            widget: list
+            allow_add: true
+            summary: "{{fields.image}}"
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+          - label: "Galeria — Śluby"
+            name: sluby
+            widget: list
+            allow_add: true
+            summary: "{{fields.image}}"
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image

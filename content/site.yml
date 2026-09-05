@@ -1,40 +1,78 @@
-# Teksty edytowalne z panelu. Zmieniasz wartości pl / en i zapisujesz.
 reviews_badge:
-  pl: "<b>5,0 / 5</b> · 133 opinie na Google, 309 na Facebooku"
-  en: "<b>5.0 / 5</b> · 133 reviews on Google, 309 on Facebook"
-
+  pl: <b>5,0 / 5</b> · 133 opinie na Google, 309 na Facebooku
+  en: <b>5.0 / 5</b> · 133 reviews on Google, 309 on Facebook
 review1_quote:
-  pl: "Zdjęcia pełne emocji, ciepła i pozytywnej energii. Kadry nietuzinkowe, naturalne, wzruszające. Prosto z aparatu wyglądają idealnie. Czuliśmy się, jakbyśmy znali się od lat."
-  en: "Photos full of emotion, warmth and positive energy. Unconventional, natural, moving frames. Straight out of camera they look perfect. We felt like we had known him for years."
-
+  pl: Zdjęcia pełne emocji, ciepła i pozytywnej energii. Kadry nietuzinkowe, naturalne, wzruszające. Prosto z aparatu wyglądają idealnie. Czuliśmy się, jakbyśmy znali się od lat.
+  en: Photos full of emotion, warmth and positive energy. Unconventional, natural, moving frames. Straight out of camera they look perfect. We felt like we had known him for years.
 review2_quote:
-  pl: "Naturalne, piękne, oddające emocje, a przy tym oryginalne. Zaufajcie Marcinowi, a nie będziecie żałować. Zadzieje się magia. Szkoda, że nie można dać dziesiątki."
-  en: "Natural, beautiful, full of emotion and at the same time original. Trust Marcin and you will not regret it. Magic will happen. A shame you cannot give a 10."
-
+  pl: Naturalne, piękne, oddające emocje, a przy tym oryginalne. Zaufajcie Marcinowi, a nie będziecie żałować. Zadzieje się magia. Szkoda, że nie można dać dziesiątki.
+  en: Natural, beautiful, full of emotion and at the same time original. Trust Marcin and you will not regret it. Magic will happen. A shame you cannot give a 10.
 review3_quote:
-  pl: "Świetnie wyłapuje emocje. Jego pomysły sprawiają, że zapominasz, że jesteś przed obiektywem. My i goście weselni jesteśmy zachwyceni zdjęciami."
-  en: "He catches emotion brilliantly. His ideas make you forget you are in front of the lens. We and our wedding guests are delighted with the photos."
-
+  pl: Świetnie wyłapuje emocje. Jego pomysły sprawiają, że zapominasz, że jesteś przed obiektywem. My i goście weselni jesteśmy zachwyceni zdjęciami.
+  en: He catches emotion brilliantly. His ideas make you forget you are in front of the lens. We and our wedding guests are delighted with the photos.
 cap_kulinarna:
-  pl: "Zdjęcie, które sprzedaje danie, zanim gość spojrzy w menu. Ustawiam światło, czekam na ten moment i łapię teksturę, parę, ociekający sos… tak, żeby ślinka ciekła. Każde danie ma swój charakter i pod to buduję kadr, nie pod cudzy szablon."
-  en: "A photo that sells the dish before the guest even opens the menu. I set the light, wait for the moment and catch the texture, the steam, the dripping sauce… so your mouth waters. Every dish has its own character and I build the frame around it, not around a template."
-
+  pl: Zdjęcie, które sprzedaje danie, zanim gość spojrzy w menu. Ustawiam światło, czekam na ten moment i łapię teksturę, parę, ociekający sos… tak, żeby ślinka ciekła. Każde danie ma swój charakter i pod to buduję kadr, nie pod cudzy szablon.
+  en: A photo that sells the dish before the guest even opens the menu. I set the light, wait for the moment and catch the texture, the steam, the dripping sauce… so your mouth waters. Every dish has its own character and I build the frame around it, not around a template.
 cap_biznes:
-  pl: "Wnętrza, portrety i marki pokazane tak, jak chcecie być zapamiętani. Każde miejsce ma swoją duszę, moją robotą jest ją wyłapać i sprawić, żeby budowała zaufanie od pierwszego spojrzenia."
-  en: "Interiors, portraits and brands shown the way you want to be remembered. Every place has its own soul, and my job is to catch it and make it build trust from the first glance."
-
+  pl: Wnętrza, portrety i marki pokazane tak, jak chcecie być zapamiętani. Każde miejsce ma swoją duszę, moją robotą jest ją wyłapać i sprawić, żeby budowała zaufanie od pierwszego spojrzenia.
+  en: Interiors, portraits and brands shown the way you want to be remembered. Every place has its own soul, and my job is to catch it and make it build trust from the first glance.
 cap_wydarzenia:
-  pl: "Scena, kulisy, twarze gwiazd i szał tłumu. Łapię ten jeden moment, którego nie da się powtórzyć… i oddaję energię tak, żebyście poczuli, że tam byliście."
-  en: "Stage, backstage, the faces of the stars and the roar of the crowd. I catch the one moment that cannot be repeated… and carry the energy so you feel like you were there."
-
+  pl: Scena, kulisy, twarze gwiazd i szał tłumu. Łapię ten jeden moment, którego nie da się powtórzyć… i oddaję energię tak, żebyście poczuli, że tam byliście.
+  en: Stage, backstage, the faces of the stars and the roar of the crowd. I catch the one moment that cannot be repeated… and carry the energy so you feel like you were there.
 cap_teatr:
-  pl: "To, co dzieje się między próbą a premierą, czego widz nigdy nie zobaczy. Fotografuję teatr tak, jak go czuję… światło, gest, napięcie tuż przed tym, aż aktor przestaje grać, a zaczyna być."
-  en: "What happens between rehearsal and opening night, what the audience never sees. I photograph theatre the way I feel it… light, gesture, the tension right before the actor stops acting and starts being."
-
+  pl: To, co dzieje się między próbą a premierą, czego widz nigdy nie zobaczy. Fotografuję teatr tak, jak go czuję… światło, gest, napięcie tuż przed tym, aż aktor przestaje grać, a zaczyna być.
+  en: What happens between rehearsal and opening night, what the audience never sees. I photograph theatre the way I feel it… light, gesture, the tension right before the actor stops acting and starts being.
 cap_sluby:
-  pl: "Wasz dzień opowiedziany po swojemu, od pierwszych nerwów przy makijażu po ostatni taniec. Nie ustawiam scenek, czekam na to, co dzieje się samo… żebyście za lata przeżyli ten dzień jeszcze raz, patrząc na zdjęcia."
-  en: "Your day told your way, from the first nerves at the makeup chair to the last dance. I do not stage little scenes, I wait for what happens on its own… so that years later you relive that day again, looking at the photos."
-
+  pl: Wasz dzień opowiedziany po swojemu, od pierwszych nerwów przy makijażu po ostatni taniec. Nie ustawiam scenek, czekam na to, co dzieje się samo… żebyście za lata przeżyli ten dzień jeszcze raz, patrząc na zdjęcia.
+  en: Your day told your way, from the first nerves at the makeup chair to the last dance. I do not stage little scenes, I wait for what happens on its own… so that years later you relive that day again, looking at the photos.
+hero_kicker:
+  pl: Fotografia kulinarna · biznesowa · eventowa · teatralna · ślubna · Jelenia Góra
+  en: Food · business · events · theatre · wedding photography · Poland
+hero_sub:
+  pl: Gastronomia, marki, wydarzenia, scena i śluby. Dokumentuję realne momenty, od najważniejszych wydarzeń polskiej sceny kulinarnej po najważniejszy dzień w życiu.
+  en: Food, brands, events, stage and weddings. I document real moments, from the biggest names of the Polish culinary scene to the most important day of your life.
+about_p1:
+  pl: Fotografuję od kilkunastu lat i robię to, co kocham najbardziej… jedzenie, przy którym cieknie ślinka, wydarzenia pełne energii, teatr, marki i najważniejszy dzień w życiu par.
+  en: I have been shooting for over a decade, doing what I love most… food that makes your mouth water, events full of energy, theatre, brands and the most important day in a couple's life.
+about_p2:
+  pl: Ustawiam światło, biorę aparat i czekam, aż wydarzy się magia… bez photoshopa i AI, bo wierzę, że najmocniejsze jest to, co wydarzyło się przed obiektywem. Nieważne, gdzie jesteście, pakuję sprzęt i przyjeżdżam tam, gdzie mnie potrzebujecie.
+  en: I set the light, pick up the camera and wait for the magic to happen… no Photoshop, no AI, because I believe the strongest thing is what happened in front of the lens. Wherever you are, I pack my gear and come to you.
+fact1:
+  pl: Jeżdżę tam, gdzie mnie potrzebujecie, Polska i świat
+  en: I travel wherever you need me, Poland and the world
+fact2:
+  pl: '#1 na świecie · Foodelia 2025'
+  en: '#1 in the world · Foodelia 2025'
+fact3:
+  pl: Cztery nagrody IPA 2026
+  en: Four IPA 2026 awards
+fact4:
+  pl: Fotograf Bocuse d'Or Poland i gali Gault&amp;Millau
+  en: Photographer of Bocuse d'Or Poland and the Gault&Millau gala
+fact5:
+  pl: Nikon Professional Services · Nikon Z9
+  en: Nikon Professional Services · Nikon Z9
+fact6:
+  pl: Dogadamy się po polsku i angielsku
+  en: We'll get along in Polish and English
+sub_kulinarna:
+  pl: 'Dania, menu i atmosfera lokalu w świetle, które sprzedaje. #1 wśród fotografów kulinarnych Foodelia 2025.'
+  en: 'Dishes, menus and the mood of the place in light that sells. Ranked #1 food photographer on Foodelia 2025.'
+sub_biznes:
+  pl: Wnętrza restauracji, portret wizerunkowy dla marek i osobistości. Profesjonalnie i naturalnie.
+  en: Restaurant interiors, brand and personal portraits for companies and public figures. Professional and natural.
+sub_hotele:
+  pl: Hotele, restauracje i wnętrza sfotografowane tak, żeby gość chciał tam być, zanim jeszcze przyjedzie.
+  en: Hotels, restaurants and interiors photographed so a guest wants to be there before they even arrive.
+sub_wydarzenia:
+  pl: Festiwale, gale, koncerty i premiery. Tam, gdzie dzieje się coś ważnego, jestem z aparatem od kulis po scenę.
+  en: Festivals, galas, concerts and premieres. Where something important is happening, I am there with a camera, from backstage to the stage.
+sub_teatr:
+  pl: Spektakle, próby i festiwale. Najcenniejsze są chwile, których widz nie zobaczy, tam zaczyna się prawdziwy teatr.
+  en: Performances, rehearsals and festivals. The most precious moments are the ones the audience never sees, that is where real theatre begins.
+sub_sluby:
+  pl: Reportaż z najważniejszego dnia, bez sztucznych póz i bez retuszu. Emocje, światło i moment, który wydarzył się naprawdę.
+  en: Documentary coverage of your most important day, no forced poses, no retouching. Emotion, light and the moment that really happened.
 cap_hotele:
-  pl: "Hotel to obietnica, a wnętrze ją składa. Fotografuję przestrzenie tak, żeby światło, faktura i klimat sprzedawały pobyt, zanim gość przekroczy próg."
-  en: "A hotel is a promise and the interior keeps it. I photograph spaces so that light, texture and atmosphere sell the stay before the guest even walks in."
+  pl: Hotel to obietnica, a wnętrze ją składa. Fotografuję przestrzenie tak, żeby światło, faktura i klimat sprzedawały pobyt, zanim gość przekroczy próg.
+  en: A hotel is a promise and the interior keeps it. I photograph spaces so that light, texture and atmosphere sell the stay before the guest even walks in.

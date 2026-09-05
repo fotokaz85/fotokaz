@@ -5,3 +5,28 @@
 
 [build.environment]
   PYTHON_VERSION = "3.11"
+
+# --- Przekierowania domen ---
+[[redirects]]
+  from = "https://fotokaz.com/*"
+  to = "https://fotokaz.pl/en/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.fotokaz.com/*"
+  to = "https://fotokaz.pl/en/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://marcinkazmieruk.pl/*"
+  to = "https://fotokaz.pl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.marcinkazmieruk.pl/*"
+  to = "https://fotokaz.pl/:splat"
+  status = 301
+  force = true
