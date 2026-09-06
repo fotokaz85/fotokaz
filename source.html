@@ -338,7 +338,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia",
    "image":"images/hero-collage.jpg","@id":"https://fotokaz.pl","url":"https://fotokaz.pl",
-   "telephone":"+48505183969","email":"m_kazmieruk@10g.pl",
+   "telephone":"+48505183969","email":"fotokaz85@gmail.com",
    "address":{"@type":"PostalAddress","addressLocality":"Jelenia Góra","addressRegion":"Dolny Śląsk","addressCountry":"PL"},
    "areaServed":"Worldwide","priceRange":"$$",
    "founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf",
@@ -351,7 +351,7 @@ if(cf){ cf.addEventListener('submit',function(e){
   e.preventDefault();
   var n=cf.name.value, em=cf.email.value, m=cf.msg.value;
   var body='Imię: '+n+'%0D%0AE-mail: '+em+'%0D%0A%0D%0A'+m;
-  window.location.href='mailto:m_kazmieruk@10g.pl?subject='+encodeURIComponent('Zapytanie ze strony fotokaz')+'&body='+body;
+  window.location.href='mailto:fotokaz85@gmail.com?subject='+encodeURIComponent('Zapytanie ze strony fotokaz')+'&body='+body;
 }); }
 
 </script>
@@ -863,7 +863,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <p data-en="&lt;strong&gt;Retention.&lt;/strong&gt; I keep the data only for as long as our correspondence and any resulting project require, then delete it."><strong>Okres przechowywania.</strong> Dane trzymam tylko tak długo, jak wymaga tego nasza korespondencja i ewentualna realizacja, a potem je usuwam.</p>
 <p data-en="&lt;strong&gt;Your rights.&lt;/strong&gt; You have the right to access, rectify, erase, restrict and object to the processing of your data, and to lodge a complaint with the Polish DPA (PUODO)."><strong>Twoje prawa.</strong> Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia i sprzeciwu wobec przetwarzania, a także wniesienia skargi do Prezesa UODO.</p>
 <p data-en="&lt;strong&gt;Cookies.&lt;/strong&gt; This site does not use tracking cookies or third-party analytics. The contact form opens your own e-mail client and stores nothing on the site."><strong>Cookies.</strong> Strona nie używa plików cookie śledzących ani zewnętrznej analityki. Formularz kontaktowy otwiera Twój program pocztowy i nie zapisuje niczego na stronie.</p>
-<p data-en="&lt;strong&gt;Contact.&lt;/strong&gt; In all data matters write to m_kazmieruk@10g.pl."><strong>Kontakt.</strong> We wszystkich sprawach dotyczących danych pisz na m_kazmieruk@10g.pl.</p>
+<p data-en="&lt;strong&gt;Contact.&lt;/strong&gt; In all data matters write to fotokaz85@gmail.com."><strong>Kontakt.</strong> We wszystkich sprawach dotyczących danych pisz na fotokaz85@gmail.com.</p>
 <a class="btn" data-en="Contact" href="kontakt.html" style="margin-top:14px">Kontakt</a>
 </div>
 <div class="about-side reveal">
@@ -873,7 +873,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <li>ul. Podgórze 1A/1, 58-500 Jelenia Góra</li>
 <li data-en="Tax ID (NIP) 6112505234">NIP 6112505234</li>
 <li>REGON 021716660</li>
-<li>m_kazmieruk@10g.pl</li>
+<li>fotokaz85@gmail.com</li>
 <li>+48 505 183 969</li>
 </ul>
 </div>
@@ -890,7 +890,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="wrap">
 <div class="contact-rows reveal" style="max-width:760px">
 <div class="crow"><div class="k" data-en="Phone">Telefon</div><a class="v" href="tel:+48505183969">+48 505 183 969</a></div>
-<div class="crow"><div class="k" data-en="E-mail">E-mail</div><a class="v" href="mailto:m_kazmieruk@10g.pl">m_kazmieruk@10g.pl</a></div>
+<div class="crow"><div class="k" data-en="E-mail">E-mail</div><a class="v" href="mailto:fotokaz85@gmail.com">fotokaz85@gmail.com</a></div>
 <div class="crow"><div class="k">Instagram</div><a class="v" href="https://instagram.com/fotofoodie" rel="noopener" target="_blank">@fotofoodie</a></div>
 <div class="crow"><div class="k">Instagram</div><a class="v" href="https://instagram.com/marcin4funphotos" rel="noopener" target="_blank">@marcin4funphotos</a></div>
 <div class="crow"><div class="k" data-en="Facebook">Facebook</div><a class="v" href="https://facebook.com/marcin4funphotos" rel="noopener" target="_blank">Marcin Kaźmieruk Fotografia</a></div>
@@ -901,11 +901,11 @@ if(cf){ cf.addEventListener('submit',function(e){
 </section>
 <section><div class="wrap" style="max-width:760px">
 <div class="sec-label reveal" data-en="Message">Napisz do mnie</div>
-<form class="cform reveal" id="cform">
+<form class="cform reveal" id="cform" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="kontakt"/><p hidden><label>Zostaw puste: <input name="bot-field"/></label></p>
 <div><label data-en="Name" for="cf-name">Imię i nazwisko</label><input id="cf-name" name="name" required=""/></div>
 <div><label data-en="E-mail" for="cf-email">E-mail</label><input id="cf-email" name="email" required="" type="email"/></div>
 <div><label data-en="Message" for="cf-msg">Wiadomość</label><textarea id="cf-msg" name="msg" required=""></textarea></div>
-<label class="consent"><input required="" type="checkbox"/><span data-en="I agree that my data will be used to answer this enquiry.">Zgadzam się na wykorzystanie moich danych w celu odpowiedzi na zapytanie (<a href="prywatnosc.html" style="color:var(--accent-soft)">polityka prywatności</a>).</span></label>
+<label class="consent"><input required="" type="checkbox" name="zgoda" value="tak"/><span data-en="I agree that my data will be used to answer this enquiry.">Zgadzam się na wykorzystanie moich danych w celu odpowiedzi na zapytanie (<a href="prywatnosc.html" style="color:var(--accent-soft)">polityka prywatności</a>).</span></label>
 <button data-en="Send message" type="submit">Wyślij wiadomość</button>
 </form>
 </div></section>

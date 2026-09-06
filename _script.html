@@ -17,9 +17,4 @@ if(imgs.length){
   lb.addEventListener('click',function(ev){if(ev.target===lb)lb.classList.remove('open');});
   document.addEventListener('keydown',function(ev){if(!lb.classList.contains('open'))return;if(ev.key==='Escape')lb.classList.remove('open');if(ev.key==='ArrowLeft')show(idx-1);if(ev.key==='ArrowRight')show(idx+1);});
 }
-var cf=document.getElementById('cform');
-if(cf){cf.addEventListener('submit',function(e){e.preventDefault();
-  var body='Imię: '+cf.name.value+'%0D%0AE-mail: '+cf.email.value+'%0D%0A%0D%0A'+cf.msg.value;
-  window.location.href='mailto:m_kazmieruk@10g.pl?subject='+encodeURIComponent('Zapytanie ze strony fotokaz')+'&body='+body;
-});}
 </script>
