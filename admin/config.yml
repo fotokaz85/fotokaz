@@ -3,12 +3,12 @@ backend:
   name: github
   repo: fotokaz85/fotokaz
   branch: main
-
+ 
 media_folder: "images"
 public_folder: "/images"
-
+ 
 locale: pl
-
+ 
 collections:
   - name: teksty
     label: "Teksty strony"
@@ -173,10 +173,10 @@ collections:
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
-
+ 
   - name: galerie
     label: "Galerie zdjęć"
-    description: "Dodawaj, usuwaj i przeciągaj zdjęcia. Kolejność na liście = kolejność na stronie."
+    description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."
     files:
       - name: wszystkie
         label: "Zdjęcia w galeriach"
@@ -186,53 +186,66 @@ collections:
             name: kulinarna
             widget: list
             allow_add: true
-            summary: "{{fields.image}}"
             field:
               label: "Zdjęcie"
               name: image
               widget: image
+              media_folder: "/images/food"
+              public_folder: "/images/food"
+              choose_url: false
           - label: "Galeria — Biznes"
             name: biznes
             widget: list
             allow_add: true
-            summary: "{{fields.image}}"
             field:
               label: "Zdjęcie"
               name: image
               widget: image
+              media_folder: "/images/biznes"
+              public_folder: "/images/biznes"
+              choose_url: false
           - label: "Galeria — Hotele"
             name: hotele
             widget: list
             allow_add: true
-            summary: "{{fields.image}}"
             field:
               label: "Zdjęcie"
               name: image
               widget: image
+              media_folder: "/images/hotele"
+              public_folder: "/images/hotele"
+              choose_url: false
           - label: "Galeria — Wydarzenia"
             name: wydarzenia
             widget: list
             allow_add: true
-            summary: "{{fields.image}}"
             field:
               label: "Zdjęcie"
               name: image
               widget: image
+              media_folder: "/images/wydarzenia"
+              public_folder: "/images/wydarzenia"
+              choose_url: false
           - label: "Galeria — Teatr"
             name: teatr
             widget: list
             allow_add: true
-            summary: "{{fields.image}}"
             field:
               label: "Zdjęcie"
               name: image
               widget: image
+              media_folder: "/images/teatr"
+              public_folder: "/images/teatr"
+              choose_url: false
           - label: "Galeria — Śluby"
             name: sluby
             widget: list
             allow_add: true
-            summary: "{{fields.image}}"
             field:
               label: "Zdjęcie"
               name: image
               widget: image
+              media_folder: "/images/sluby"
+              public_folder: "/images/sluby"
+              choose_url: false
+ 
