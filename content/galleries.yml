@@ -1,183 +1,197 @@
 kulinarna:
-  - /images/food/01.jpg
-  - /images/food/02.jpg
-  - /images/food/03.jpg
-  - /images/food/04.jpg
-  - /images/food/05.jpg
-  - /images/food/06.jpg
-  - /images/food/07.jpg
-  - /images/food/08.jpg
-  - /images/food/09.jpg
-  - /images/food/10.jpg
-  - /images/food/11.jpg
-  - /images/food/12.jpg
-  - /images/food/13.jpg
-  - /images/food/14.jpg
-  - /images/food/15.jpg
-  - /images/food/16.jpg
-  - /images/food/17.jpg
-  - /images/food/18.jpg
-  - /images/food/19.jpg
-  - /images/food/20.jpg
-  - /images/food/21.jpg
-  - /images/food/22.jpg
-  - /images/food/23.jpg
-  - /images/food/24.jpg
-  - /images/food/25.jpg
-  - /images/food/26.jpg
-  - /images/food/27.jpg
-  - /images/food/28.jpg
-  - /images/food/29.jpg
-  - /images/food/30.jpg
-  - /images/food/31.jpg
-  - /images/food/32.jpg
-  - /images/food/33.jpg
-  - /images/food/34.jpg
-  - /images/food/35.jpg
-  - /images/food/36.jpg
-  - /images/food/37.jpg
-  - /images/food/38.jpg
-  - /images/food/39.jpg
-  - /images/food/40.jpg
-  - /images/food/41.jpg
-  - /images/food/42.jpg
-  - /images/food/43.jpg
-  - /images/food/44.jpg
-  - /images/food/45.jpg
-  - /images/food/46.jpg
-  - /images/food/47.jpg
-  - /images/food/48.jpg
-  - /images/food/49.jpg
-  - /images/food/50.jpg
-  - /images/food/51.jpg
+- /images/food/01.jpg
+- /images/food/02.jpg
+- /images/food/03.jpg
+- /images/food/04.jpg
+- /images/food/05.jpg
+- /images/food/06.jpg
+- /images/food/07.jpg
+- /images/food/08.jpg
+- /images/food/09.jpg
+- /images/food/10.jpg
+- /images/food/11.jpg
+- /images/food/12.jpg
+- /images/food/13.jpg
+- /images/food/14.jpg
+- /images/food/15.jpg
+- /images/food/16.jpg
+- /images/food/17.jpg
+- /images/food/18.jpg
+- /images/food/19.jpg
+- /images/food/20.jpg
+- /images/food/21.jpg
+- /images/food/22.jpg
+- /images/food/23.jpg
+- /images/food/24.jpg
+- /images/food/25.jpg
+- /images/food/26.jpg
+- /images/food/27.jpg
+- /images/food/28.jpg
+- /images/food/29.jpg
+- /images/food/30.jpg
+- /images/food/31.jpg
+- /images/food/32.jpg
+- /images/food/33.jpg
+- /images/food/34.jpg
+- /images/food/35.jpg
+- /images/food/36.jpg
+- /images/food/37.jpg
+- /images/food/38.jpg
+- /images/food/39.jpg
+- /images/food/40.jpg
+- /images/food/41.jpg
+- /images/food/42.jpg
+- /images/food/43.jpg
+- /images/food/44.jpg
+- /images/food/45.jpg
+- /images/food/46.jpg
+- /images/food/47.jpg
+- /images/food/48.jpg
+- /images/food/49.jpg
+- /images/food/50.jpg
+- /images/food/51.jpg
 biznes:
-  - /images/biznes/01.jpg
-  - /images/biznes/02.jpg
-  - /images/biznes/03.jpg
-  - /images/biznes/04.jpg
-  - /images/biznes/05.jpg
-  - /images/biznes/06.jpg
-  - /images/biznes/07.jpg
-  - /images/biznes/08.jpg
-  - /images/biznes/09.jpg
-  - /images/biznes/10.jpg
-  - /images/biznes/11.jpg
-  - /images/biznes/12.jpg
-  - /images/biznes/13.jpg
-  - /images/KAZMIERUK_MARCIN-260527-175120-KAZMIERUK_MARCIN-260527-175120-DSC_7158.jpg
-  - /images/biznes/15.jpg
-  - /images/biznes/16.jpg
-  - /images/KAZMIERUK_MARCIN-260527-180620-KAZMIERUK_MARCIN-260527-180620-DSC_7307.jpg
-  - /images/KAZMIERUK_MARCIN-260527-182956-KAZMIERUK_MARCIN-260527-182956-DSC_7556.jpg
-  - /images/biznes/19.jpg
-  - /images/KAZMIERUK_MARCIN-250808-130450-DSC_8053.jpg
-  - /images/KAZMIERUK_MARCIN-260323-112446-DSC_7981.jpg
-  - /images/biznes/22.jpg
+- /images/biznes/01.jpg
+- /images/biznes/02.jpg
+- /images/biznes/03.jpg
+- /images/biznes/04.jpg
+- /images/biznes/05.jpg
+- /images/biznes/06.jpg
+- /images/biznes/07.jpg
+- /images/biznes/08.jpg
+- /images/biznes/09.jpg
+- /images/biznes/10.jpg
+- /images/biznes/11.jpg
+- /images/biznes/12.jpg
+- /images/biznes/13.jpg
+- /images/biznes/14.jpg
+- /images/biznes/15.jpg
+- /images/biznes/16.jpg
+- /images/biznes/17.jpg
+- /images/biznes/18.jpg
+- /images/biznes/19.jpg
+- /images/biznes/20.jpg
+- /images/biznes/21.jpg
+- /images/biznes/22.jpg
 hotele:
-  - /images/hotele/01.jpg
-  - /images/hotele/02.jpg
-  - /images/hotele/03.jpg
-  - /images/hotele/04.jpg
-  - /images/hotele/05.jpg
-  - /images/hotele/06.jpg
-  - /images/hotele/07.jpg
-  - /images/hotele/08.jpg
-  - /images/hotele/09.jpg
-  - /images/hotele/10.jpg
-  - /images/hotele/11.jpg
-  - /images/hotele/12.jpg
-  - /images/hotele/13.jpg
-  - /images/hotele/14.jpg
-  - /images/hotele/15.jpg
-  - /images/hotele/16.jpg
-  - /images/hotele/17.jpg
-  - /images/hotele/18.jpg
-  - /images/hotele/19.jpg
-  - /images/hotele/20.jpg
-  - /images/hotele/21.jpg
-  - /images/hotele/22.jpg
-  - /images/hotele/23.jpg
-  - /images/hotele/24.jpg
-  - /images/hotele/25.jpg
-  - /images/hotele/26.jpg
-  - /images/hotele/27.jpg
-  - /images/hotele/28.jpg
-  - /images/hotele/29.jpg
-  - /images/hotele/30.jpg
-  - /images/hotele/31.jpg
-  - /images/hotele/32.jpg
-  - /images/hotele/33.jpg
-  - /images/hotele/34.jpg
+- /images/hotele/01.jpg
+- /images/hotele/02.jpg
+- /images/hotele/03.jpg
+- /images/hotele/04.jpg
+- /images/hotele/05.jpg
+- /images/hotele/06.jpg
+- /images/hotele/07.jpg
+- /images/hotele/08.jpg
+- /images/hotele/09.jpg
+- /images/hotele/10.jpg
+- /images/hotele/11.jpg
+- /images/hotele/12.jpg
+- /images/hotele/13.jpg
+- /images/hotele/14.jpg
+- /images/hotele/15.jpg
+- /images/hotele/16.jpg
+- /images/hotele/17.jpg
+- /images/hotele/18.jpg
+- /images/hotele/19.jpg
+- /images/hotele/20.jpg
+- /images/hotele/21.jpg
+- /images/hotele/22.jpg
+- /images/hotele/23.jpg
+- /images/hotele/24.jpg
+- /images/hotele/25.jpg
+- /images/hotele/26.jpg
+- /images/hotele/27.jpg
+- /images/hotele/28.jpg
+- /images/hotele/29.jpg
+- /images/hotele/30.jpg
+- /images/hotele/31.jpg
+- /images/hotele/32.jpg
+- /images/hotele/33.jpg
+- /images/hotele/34.jpg
 wydarzenia:
-  - /images/wydarzenia/01.jpg
-  - /images/wydarzenia/02.jpg
-  - /images/wydarzenia/03.jpg
-  - /images/wydarzenia/04.jpg
-  - /images/wydarzenia/05.jpg
-  - /images/wydarzenia/06.jpg
-  - /images/wydarzenia/07.jpg
-  - /images/wydarzenia/08.jpg
-  - /images/wydarzenia/09.jpg
-  - /images/wydarzenia/10.jpg
-  - /images/wydarzenia/11.jpg
-  - /images/wydarzenia/12.jpg
-  - /images/wydarzenia/13.jpg
-  - /images/wydarzenia/14.jpg
-  - /images/wydarzenia/15.jpg
-  - /images/wydarzenia/KAZMIERUK_MARCIN-260829-221833-MKF_5397.jpg
-  - /images/wydarzenia/17.jpg
-  - /images/wydarzenia/18.jpg
-  - /images/wydarzenia/19.jpg
-  - /images/wydarzenia/20.jpg
-  - /images/wydarzenia/21.jpg
-  - /images/wydarzenia/22.jpg
-  - /images/wydarzenia/23.jpg
-  - /images/wydarzenia/24.jpg
-  - /images/wydarzenia/25.jpg
-  - /images/wydarzenia/26.jpg
-  - /images/wydarzenia/27.jpg
-  - /images/wydarzenia/28.jpg
-  - /images/wydarzenia/29.jpg
-  - /images/wydarzenia/30.jpg
+- /images/wydarzenia/01.jpg
+- /images/wydarzenia/02.jpg
+- /images/wydarzenia/03.jpg
+- /images/wydarzenia/04.jpg
+- /images/wydarzenia/05.jpg
+- /images/wydarzenia/06.jpg
+- /images/wydarzenia/07.jpg
+- /images/wydarzenia/08.jpg
+- /images/wydarzenia/09.jpg
+- /images/wydarzenia/10.jpg
+- /images/wydarzenia/11.jpg
+- /images/wydarzenia/12.jpg
+- /images/wydarzenia/13.jpg
+- /images/wydarzenia/14.jpg
+- /images/wydarzenia/15.jpg
+- /images/wydarzenia/16.jpg
+- /images/wydarzenia/17.jpg
+- /images/wydarzenia/18.jpg
+- /images/wydarzenia/19.jpg
+- /images/wydarzenia/20.jpg
+- /images/wydarzenia/21.jpg
+- /images/wydarzenia/22.jpg
+- /images/wydarzenia/23.jpg
+- /images/wydarzenia/24.jpg
+- /images/wydarzenia/25.jpg
+- /images/wydarzenia/26.jpg
+- /images/wydarzenia/27.jpg
+- /images/wydarzenia/28.jpg
+- /images/wydarzenia/29.jpg
+- /images/wydarzenia/30.jpg
 teatr:
-  - /images/teatr/01.jpg
-  - /images/teatr/02.jpg
-  - /images/teatr/03.jpg
-  - /images/teatr/04.jpg
-  - /images/teatr/05.jpg
-  - /images/teatr/06.jpg
-  - /images/teatr/07.jpg
-  - /images/teatr/08.jpg
-  - /images/teatr/09.jpg
-  - /images/teatr/10.jpg
+- /images/teatr/01.jpg
+- /images/teatr/02.jpg
+- /images/teatr/03.jpg
+- /images/teatr/04.jpg
+- /images/teatr/05.jpg
+- /images/teatr/06.jpg
+- /images/teatr/07.jpg
+- /images/teatr/08.jpg
+- /images/teatr/09.jpg
+- /images/teatr/10.jpg
 sluby:
-  - /images/sluby/01.jpg
-  - /images/sluby/02.jpg
-  - /images/sluby/03.jpg
-  - /images/sluby/04.jpg
-  - /images/sluby/05.jpg
-  - /images/sluby/06.jpg
-  - /images/sluby/07.jpg
-  - /images/sluby/08.jpg
-  - /images/sluby/09.jpg
-  - /images/sluby/10.jpg
-  - /images/sluby/11.jpg
-  - /images/sluby/12.jpg
-  - /images/sluby/13.jpg
-  - /images/sluby/14.jpg
-  - /images/sluby/15.jpg
-  - /images/sluby/16.jpg
-  - /images/sluby/17.jpg
-  - /images/sluby/18.jpg
-  - /images/sluby/19.jpg
-  - /images/sluby/20.jpg
-  - /images/sluby/21.jpg
-  - /images/sluby/22.jpg
-  - /images/sluby/23.jpg
-  - /images/sluby/24.jpg
-  - /images/sluby/25.jpg
-  - /images/sluby/26.jpg
-  - /images/sluby/27.jpg
-  - /images/sluby/28.jpg
-  - /images/sluby/29.jpg
-  - /images/sluby/30.jpg
+- /images/sluby/01.jpg
+- /images/sluby/02.jpg
+- /images/sluby/03.jpg
+- /images/sluby/04.jpg
+- /images/sluby/05.jpg
+- /images/sluby/06.jpg
+- /images/sluby/07.jpg
+- /images/sluby/08.jpg
+- /images/sluby/09.jpg
+- /images/sluby/10.jpg
+- /images/sluby/11.jpg
+- /images/sluby/12.jpg
+- /images/sluby/13.jpg
+- /images/sluby/14.jpg
+- /images/sluby/15.jpg
+- /images/sluby/16.jpg
+- /images/sluby/17.jpg
+- /images/sluby/18.jpg
+- /images/sluby/19.jpg
+- /images/sluby/20.jpg
+- /images/sluby/21.jpg
+- /images/sluby/22.jpg
+- /images/sluby/23.jpg
+- /images/sluby/24.jpg
+- /images/sluby/25.jpg
+- /images/sluby/26.jpg
+- /images/sluby/27.jpg
+- /images/sluby/28.jpg
+- /images/sluby/29.jpg
+- /images/sluby/30.jpg
+wyroznienia:
+- /images/wyroznienia/cert-01.jpg
+- /images/wyroznienia/cert-02.jpg
+- /images/wyroznienia/cert-03.jpg
+- /images/wyroznienia/cert-04.jpg
+- /images/wyroznienia/cert-05.jpg
+- /images/wyroznienia/cert-06.jpg
+- /images/wyroznienia/cert-07.jpg
+- /images/wyroznienia/cert-08.jpg
+- /images/wyroznienia/cert-09.jpg
+- /images/wyroznienia/cert-10.jpg
+- /images/wyroznienia/cert-11.jpg
+- /images/wyroznienia/cert-12.jpg
+- /images/wyroznienia/cert-13.jpg

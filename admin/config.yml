@@ -3,12 +3,12 @@ backend:
   name: github
   repo: fotokaz85/fotokaz
   branch: main
- 
+
 media_folder: "images"
 public_folder: "/images"
- 
+
 locale: pl
- 
+
 collections:
   - name: teksty
     label: "Teksty strony"
@@ -173,7 +173,32 @@ collections:
             fields:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
- 
+
+          - label: "Wyróżnienia — wstęp nad nagrodami"
+            name: award_intro
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Wyróżnienia — opis Foodelia"
+            name: award_foodelia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Wyróżnienia — opis IPA"
+            name: award_ipa
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Wyróżnienia — opis Flash Masters"
+            name: award_flashmasters
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+
   - name: galerie
     label: "Galerie zdjęć"
     description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."
@@ -248,4 +273,14 @@ collections:
               media_folder: "/images/sluby"
               public_folder: "/images/sluby"
               choose_url: false
- 
+          - label: "Galeria — Wyróżnienia (nagrody, certyfikaty)"
+            name: wyroznienia
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/wyroznienia"
+              public_folder: "/images/wyroznienia"
+              choose_url: false

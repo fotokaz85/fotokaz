@@ -316,6 +316,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .cat-card:hover .cat-bg{opacity:.72;transform:scale(1.05)}
 .cat-card .cat-scrim{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(10,14,26,.55) 0%,rgba(10,14,26,.25) 45%,rgba(10,14,26,.82) 100%)}
 .cat-card>*:not(.cat-bg){position:relative;z-index:1}
+
+/* wyróżnione nagrody */
+.awards-feature{display:flex;flex-direction:column;gap:52px;margin-top:44px}
+.afeat{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.afeat.rev .af-media{order:2}
+.af-media{display:flex;gap:14px}
+.af-media img{width:100%;border-radius:8px;display:block;object-fit:cover;border:1px solid var(--line-soft)}
+.af-media.pair img{width:50%}
+.af-kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.af-text h3{font-size:27px;color:var(--ink);margin-bottom:14px}
+.af-text p{font-size:16px;line-height:1.7;color:var(--ink-dim)}
+@media(max-width:820px){.afeat{grid-template-columns:1fr;gap:22px}.afeat.rev .af-media{order:0}}
 </style>
 <meta content="website" property="og:type"/>
 <meta content="fotokaz — Marcin Kaźmieruk, fotograf kulinarny i komercyjny" property="og:title"/>
@@ -531,6 +543,39 @@ if(cf){ cf.addEventListener('submit',function(e){
 </section>
 <section>
 <div class="wrap">
+<div class="sec-label reveal" data-en="The awards up close">Nagrody z bliska</div>
+<h2 class="sec-title reveal" data-en='What is behind &lt;span class="it"&gt;each of them&lt;/span&gt;'>Co stoi za <span class="it">każdą z nich</span></h2>
+<p class="sec-intro reveal" data-en="Behind each of these awards are years of work and hundreds of frames. Here are the ones that mean the most to me, and why.">Za każdą z tych nagród stoją lata pracy i setki kadrów. Oto te, które znaczą dla mnie najwięcej, i dlaczego.</p>
+<div class="awards-feature">
+<div class="afeat reveal">
+<div class="af-media"><img src="images/food/51.jpg" alt="Foodelia numer 1 na świecie — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-text">
+<div class="af-kicker" data-en="#1 in the world · Foodelia 2025">#1 na świecie · Foodelia 2025</div>
+<h3 data-en="Number one, earned over a whole year">Numer jeden, wypracowany przez cały rok</h3>
+<p data-en="Number one in the world at Foodelia is not one lucky frame. Foodelia counts points all year round, so to finish first you have to deliver top quality consistently, dish after dish, for twelve months. It is the title I am most proud of, because it stands on a full year of work and persistence, not on chance.">Numer jeden na świecie w Foodelii to nie jeden szczęśliwy kadr. Foodelia liczy punkty przez cały rok, więc żeby być pierwszym, trzeba dowozić najwyższą jakość konsekwentnie, danie po daniu, przez dwanaście miesięcy. To tytuł, z którego jestem najbardziej dumny, bo stoi za nim rok pracy i wytrwałość, a nie przypadek.</p>
+</div>
+</div>
+<div class="afeat rev reveal">
+<div class="af-media pair"><img src="images/wyroznienia/seal-1.jpg" alt="IPA 2026 druga nagroda Professional — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/seal-2.jpg" alt="IPA 2026 wyróżnienie — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-text">
+<div class="af-kicker" data-en="International Photography Awards 2026">International Photography Awards 2026</div>
+<h3 data-en="On the podium, judged worldwide">Na podium, w ocenie całego świata</h3>
+<p data-en="IPA is one of the most prestigious photography competitions in the world, with thousands of entries from dozens of countries. In 2026 I took podium places and honourable mentions in several categories, and received the awards at a gala in the Benaki Museum in Athens. Every verdict like this is confirmation from an international jury that a frame holds up on both craft and story.">IPA to jeden z najbardziej prestiżowych konkursów fotograficznych na świecie, z tysiącami zgłoszeń z kilkudziesięciu krajów. W 2026 zdobyłem miejsca na podium i wyróżnienia w kilku kategoriach, a nagrody odebrałem na gali w Muzeum Benaki w Atenach. Każdy taki werdykt to potwierdzenie od międzynarodowego jury, że kadr broni się i techniką, i historią.</p>
+</div>
+</div>
+<div class="afeat reveal">
+<div class="af-media pair"><img src="images/wyroznienia/fm-1.jpg" alt="Flash Masters Top 10 na świecie — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/fm-2.jpg" alt="Flash Masters Environmental Photography Top 10 — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-text">
+<div class="af-kicker" data-en="Flash Masters · Top 10 in the world">Flash Masters · Top 10 na świecie</div>
+<h3 data-en="In the world's top ten">W pierwszej dziesiątce świata</h3>
+<p data-en="Top 10 in the world at Flash Masters in Environmental Photography. It is a ranking of the best photographers working with light outdoors, from all over the world. Being in the global top ten is a huge distinction for me, because what counts there is the idea, the light and the courage, not the gear.">Top 10 na świecie we Flash Masters w kategorii Environmental Photography. To zestawienie najlepszych fotografów operujących światłem w plenerze, z całego świata. Znaleźć się w pierwszej dziesiątce globu to dla mnie ogromne wyróżnienie, bo liczy się tam pomysł, światło i odwaga, a nie sprzęt.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
 <div class="sec-label reveal" data-en="Awards &amp; recognition">Wyróżnienia i uznanie</div>
 <h2 class="sec-title reveal" data-en='What stays &lt;span class="it"&gt;over the years&lt;/span&gt;'>Co zostaje <span class="it">po latach</span></h2>
 <div class="honors-grid">
@@ -558,6 +603,13 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="press-row"><div class="outlet">Magazyn Wesele</div><div class="desc" data-en="A shoot at Czocha Castle (the 20th anniversary issue).">Realizacja na Zamku Czocha (numer 20-lecia).</div></div>
 </div>
 </div>
+</section>
+<section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="sec-label reveal" data-en="Awards &amp; certificates">Nagrody i certyfikaty</div>
+    <h2 class="sec-title reveal" data-en="Proof, not just <span class=&quot;it&quot;>words</span>">Dowody, nie tylko <span class="it">słowa</span></h2>
+    <div class="masonry"><!--GALLERY:wyroznienia--></div>
+  </div>
 </section>
 <section class="cta-band"><div class="wrap">
 <h2 class="reveal" data-en='Want me on &lt;span class="it"&gt;your project?&lt;/span&gt;'>Chcesz mnie do <span class="it">swojego projektu?</span></h2>
