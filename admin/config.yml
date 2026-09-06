@@ -199,6 +199,13 @@ collections:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
 
+          - label: "Wyróżnienia — opis Spotlight (Production Paradise)"
+            name: award_spotlight
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+
   - name: galerie
     label: "Galerie zdjęć"
     description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."

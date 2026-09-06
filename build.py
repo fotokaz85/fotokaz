@@ -31,7 +31,7 @@ def esc(s): return s.replace("&","&amp;").replace('"',"&quot;")
 ANCHORS=json.load(open(os.path.join(HERE,"_anchors.json"),encoding="utf-8"))
 # uzupełnij o pola opinii/plakietki/opisów (te same anchory co wartości domyślne w site.yml)
 for k in ["reviews_badge","review1_quote","review2_quote","review3_quote",
-          "cap_kulinarna","cap_biznes","cap_wydarzenia","cap_teatr","cap_sluby","cap_hotele","award_intro","award_foodelia","award_ipa","award_flashmasters"]:
+          "cap_kulinarna","cap_biznes","cap_wydarzenia","cap_teatr","cap_sluby","cap_hotele","award_intro","award_foodelia","award_ipa","award_flashmasters","award_spotlight"]:
     ANCHORS[k]={"pl":site[k]["pl"],"en":site[k]["en"]}
 
 def transform(inner_html, lang):
