@@ -96,6 +96,7 @@ def build(page,lang):
     ppage=soup.find("div",attrs={"data-page":page})
     inner=transform(ppage.decode_contents(),lang)
     inner=apply_content(inner,lang)
+    inner=inner.replace('WEB3KEY_PLACEHOLDER', str(site.get('web3_key','')))
     for cat in GAL_ALT:                          # wstaw galerie z galleries.yml
         inner=inner.replace(f'<!--GALLERY:{cat}-->', render_gallery(cat))
     if lang=="en":

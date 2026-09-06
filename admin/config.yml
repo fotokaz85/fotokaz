@@ -206,6 +206,8 @@ collections:
               - { label: "Polski", name: pl, widget: text }
               - { label: "Angielski", name: en, widget: text }
 
+          - { label: "Klucz formularza kontaktowego (Web3Forms)", name: web3_key, widget: string }
+
   - name: galerie
     label: "Galerie zdjęć"
     description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."
