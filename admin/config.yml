@@ -208,6 +208,44 @@ collections:
 
           - { label: "Klucz formularza kontaktowego (Web3Forms)", name: web3_key, widget: string }
 
+          - label: "Wygląd strony — czcionka"
+            name: theme_font
+            widget: select
+            default: fraunces_outfit
+            options:
+              - { label: "Elegancki serif (Fraunces + Outfit) — domyślny", value: fraunces_outfit }
+              - { label: "Redakcyjny (Playfair + Inter)", value: playfair_inter }
+              - { label: "Wysmakowany lekki (Cormorant + Jost)", value: cormorant_jost }
+              - { label: "Nowoczesny (Space Grotesk + Inter)", value: space_inter }
+              - { label: "Klasyczny druk (Libre Baskerville + Source Sans)", value: libre_source }
+          - label: "Wygląd strony — kolor akcentu"
+            name: theme_accent
+            widget: select
+            default: blekit
+            options:
+              - { label: "Błękit — domyślny", value: blekit }
+              - { label: "Złoto", value: zloto }
+              - { label: "Terakota", value: terakota }
+              - { label: "Szałwia (zieleń)", value: szalwia }
+              - { label: "Grafit / srebro", value: grafit }
+          - label: "Wygląd strony — rozmiar tekstu"
+            name: theme_text_size
+            widget: select
+            default: standard
+            options:
+              - { label: "Mniejszy", value: mniejszy }
+              - { label: "Standard", value: standard }
+              - { label: "Większy", value: wiekszy }
+          - label: "Wygląd strony — grubość nagłówków"
+            name: theme_heading_weight
+            widget: select
+            default: "400"
+            options:
+              - { label: "Normalna", value: "400" }
+              - { label: "Średnia", value: "500" }
+              - { label: "Pogrubiona", value: "600" }
+              - { label: "Mocna", value: "700" }
+
   - name: galerie
     label: "Galerie zdjęć"
     description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."

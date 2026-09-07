@@ -11,6 +11,44 @@ site=yaml.safe_load(open(os.path.join(HERE,"content","site.yml"),encoding="utf-8
 pages_cfg=yaml.safe_load(open(os.path.join(HERE,"content","pages.yml"),encoding="utf-8"))
 galleries=yaml.safe_load(open(os.path.join(HERE,"content","galleries.yml"),encoding="utf-8")) or {}
 
+# ---------- Wygląd strony (globalne ustawienia z panelu) ----------
+FONTS={
+ "fraunces_outfit":{"head":"'Fraunces',serif","body":"'Outfit',sans-serif",
+   "url":"https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap"},
+ "playfair_inter":{"head":"'Playfair Display',serif","body":"'Inter',sans-serif",
+   "url":"https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"},
+ "cormorant_jost":{"head":"'Cormorant Garamond',serif","body":"'Jost',sans-serif",
+   "url":"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"},
+ "space_inter":{"head":"'Space Grotesk',sans-serif","body":"'Inter',sans-serif",
+   "url":"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"},
+ "libre_source":{"head":"'Libre Baskerville',serif","body":"'Source Sans 3',sans-serif",
+   "url":"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap"},
+}
+ACCENTS={
+ "blekit":("#7da2d9","#a9c5ee"),
+ "zloto":("#c9a86a","#e2c78f"),
+ "terakota":("#cc7a5c","#e3a184"),
+ "szalwia":("#8fae8b","#b4ccb0"),
+ "grafit":("#9aa7bd","#c3cddd"),
+}
+SIZES={  # (fs_base, fs_copy)
+ "mniejszy":("15px","16px"),
+ "standard":("16px","17px"),
+ "wiekszy":("17px","18px"),
+}
+_font=FONTS.get(str(site.get("theme_font","fraunces_outfit")),FONTS["fraunces_outfit"])
+_acc=ACCENTS.get(str(site.get("theme_accent","blekit")),ACCENTS["blekit"])
+_sz=SIZES.get(str(site.get("theme_text_size","standard")),SIZES["standard"])
+_hw=str(site.get("theme_heading_weight","400") or "400")
+FONTS_LINK=('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+ '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+ f'<link href="{_font["url"]}" rel="stylesheet">')
+THEME_STYLE=('<style>:root{'
+ f'--font-head:{_font["head"]};--font-body:{_font["body"]};'
+ f'--accent:{_acc[0]};--accent-soft:{_acc[1]};'
+ f'--hw-head:{_hw};--fs-base:{_sz[0]};--fs-copy:{_sz[1]}'
+ '}</style>')
+
 soup=BeautifulSoup(open(SRC,encoding="utf-8").read(),"html.parser")
 css=soup.find("style").text+"\n.ppage{display:block}\n"
 
@@ -130,10 +168,9 @@ def build(page,lang):
 <meta property="og:image" content="{ogimg}">
 <meta property="og:locale" content="{loc}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+{FONTS_LINK}
 <link rel="stylesheet" href="{cssref}">
+{THEME_STYLE}
 {jsonld(page,lang)}
 </head>
 <body>

@@ -26,6 +26,12 @@
   --line:rgba(125,162,217,.12);
   --line-soft:rgba(125,162,217,.08);
   --maxw:1180px;
+  /* Wygląd strony (nadpisywane z panelu przez build.py) */
+  --font-head:'Fraunces',serif;
+  --font-body:'Outfit',sans-serif;
+  --hw-head:400;
+  --fs-base:16px;
+  --fs-copy:17px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -33,8 +39,9 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:var(--ink);
-  font-family:'Outfit',sans-serif;
+  font-family:var(--font-body);
   font-weight:300;
+  font-size:var(--fs-base);
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -43,7 +50,7 @@ body{
 a{color:inherit}
 img{max-width:100%;display:block}
 
-h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:400;line-height:1.07;letter-spacing:-.01em}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:var(--hw-head);line-height:1.07;letter-spacing:-.01em}
 .it{font-style:italic;color:var(--accent-soft);font-weight:300}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
@@ -56,7 +63,7 @@ nav{
   background:rgba(10,14,26,.72);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line-soft);
 }
-nav .logo{font-family:'Fraunces',serif;font-size:21px;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+nav .logo{font-family:var(--font-head);font-size:21px;letter-spacing:.02em;color:var(--ink);text-decoration:none}
 nav .logo span{color:var(--accent)}
 nav .links{display:flex;gap:30px;align-items:center}
 nav .links a{
@@ -74,7 +81,7 @@ nav .lang:hover{border-color:var(--accent);color:var(--accent-soft)}
 section{padding:120px 0}
 .sec-label{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
 .sec-title{font-size:clamp(32px,5vw,52px);margin-bottom:26px}
-.sec-intro{max-width:620px;color:var(--ink-dim);font-size:17px;margin-bottom:60px}
+.sec-intro{max-width:620px;color:var(--ink-dim);font-size:var(--fs-copy);margin-bottom:60px}
 
 /* ---------- PAGE HERO (podstrony) ---------- */
 .page-hero{
@@ -105,7 +112,7 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 
 .hero-meta{display:flex;flex-wrap:wrap;gap:14px 46px;margin-top:54px}
 .hero-meta .item{padding-left:16px;border-left:1px solid var(--line)}
-.hero-meta .n{font-family:'Fraunces',serif;font-size:30px;color:var(--ink);line-height:1}
+.hero-meta .n{font-family:var(--font-head);font-size:30px;color:var(--ink);line-height:1}
 .hero-meta .l{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:7px}
 
 /* ---------- CATEGORY CARDS (home) ---------- */
@@ -156,7 +163,7 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
   display:none;align-items:center;justify-content:center;padding:32px}
 .lb.open{display:flex}
 .lb img{max-width:92vw;max-height:90vh;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
-.lb .x{position:absolute;top:24px;right:30px;font-size:34px;color:var(--ink-dim);cursor:pointer;line-height:1;font-family:'Outfit',sans-serif}
+.lb .x{position:absolute;top:24px;right:30px;font-size:34px;color:var(--ink-dim);cursor:pointer;line-height:1;font-family:var(--font-body)}
 .lb .x:hover{color:var(--accent-soft)}
 .lb .nav-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:44px;color:var(--ink-dim);cursor:pointer;padding:0 22px;user-select:none;transition:color .25s}
 .lb .nav-arrow:hover{color:var(--accent-soft)}
@@ -178,7 +185,7 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 .press-list{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
 .press-row{background:var(--bg);padding:26px 30px;display:flex;gap:26px;align-items:baseline;transition:background .3s}
 .press-row:hover{background:var(--bg-soft)}
-.press-row .outlet{font-family:'Fraunces',serif;font-size:21px;color:var(--ink);min-width:200px}
+.press-row .outlet{font-family:var(--font-head);font-size:21px;color:var(--ink);min-width:200px}
 .press-row .desc{color:var(--ink-dim);font-size:15px}
 
 /* ---------- EVENT/SIMPLE TWO-COL LIST ---------- */
@@ -191,9 +198,9 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 
 /* ---------- ABOUT ---------- */
 .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:64px}
-.about-grid p{margin-bottom:20px;color:var(--ink-dim);font-size:17px}
+.about-grid p{margin-bottom:20px;color:var(--ink-dim);font-size:var(--fs-copy)}
 .about-grid p strong{color:var(--ink);font-weight:500}
-.about-side h3{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-family:'Outfit',sans-serif;font-weight:500}
+.about-side h3{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-family:var(--font-body);font-weight:500}
 .about-side ul{list-style:none}
 .about-side li{padding:9px 0;border-bottom:1px solid var(--line-soft);color:var(--ink-dim);font-size:15px}
 
@@ -209,13 +216,13 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 /* ---------- CTA BAND ---------- */
 .cta-band{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);text-align:center}
 .cta-band h2{font-size:clamp(28px,4vw,44px);margin-bottom:18px}
-.cta-band p{color:var(--ink-dim);max-width:560px;margin:0 auto 32px;font-size:17px}
+.cta-band p{color:var(--ink-dim);max-width:560px;margin:0 auto 32px;font-size:var(--fs-copy)}
 .btn{display:inline-block;padding:15px 36px;border:1px solid var(--accent);color:var(--accent-soft);text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-radius:2px;transition:.3s}
 .btn:hover{background:var(--accent);color:var(--bg)}
 
 /* ---------- FOOTER ---------- */
 footer{padding:64px 0 40px;text-align:center;border-top:1px solid var(--line-soft)}
-footer .logo{font-family:'Fraunces',serif;font-size:24px;color:var(--ink)}
+footer .logo{font-family:var(--font-head);font-size:24px;color:var(--ink)}
 footer .logo span{color:var(--accent)}
 footer .tag{margin:16px 0;color:var(--ink-dim);font-size:14px}
 footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:22px 0}
@@ -236,10 +243,10 @@ footer .copy{color:var(--ink-faint);font-size:12.5px;margin-top:18px}
 .rev-badge .rb-t b{color:var(--ink);font-weight:500}
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 .rev-card{position:relative;background:var(--bg-soft);border:1px solid var(--line-soft);border-radius:10px;padding:34px 30px 28px;display:flex;flex-direction:column}
-.rev-card .qmark{font-family:'Fraunces',serif;font-size:56px;line-height:.6;color:var(--accent);opacity:.45;margin-bottom:14px}
+.rev-card .qmark{font-family:var(--font-head);font-size:56px;line-height:.6;color:var(--accent);opacity:.45;margin-bottom:14px}
 .rev-card p{font-size:15.5px;line-height:1.62;color:var(--ink-dim);margin:0 0 22px}
 .rev-card .who{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--line-soft)}
-.rev-card .who .nm{font-family:'Fraunces',serif;font-size:17px;color:var(--ink)}
+.rev-card .who .nm{font-family:var(--font-head);font-size:17px;color:var(--ink)}
 .rev-card .who .rl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
 .rev-card .who .st{color:var(--accent-soft);font-size:13px;letter-spacing:1px}
 @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
@@ -286,7 +293,7 @@ header.hero{position:relative}
 .hp-label{position:absolute;left:0;right:0;bottom:26px;z-index:2;text-align:center;padding:0 8px;
   opacity:.55;transition:opacity .4s;transform:translateY(6px)}
 .hpanel:hover .hp-label{opacity:1;transform:none}
-.hp-label b{display:block;font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--ink);letter-spacing:.3px}
+.hp-label b{display:block;font-family:var(--font-head);font-size:20px;font-weight:500;color:var(--ink);letter-spacing:.3px}
 .hp-label i{display:block;font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft);margin-top:6px;opacity:0;transition:opacity .4s}
 .hpanel:hover .hp-label i{opacity:1}
 @media(max-width:760px){.hero-grid{flex-direction:column;gap:1px}.hero-grid:hover .hpanel{flex:.8}.hpanel:hover{flex:2.2}.hp-label{bottom:12px}.hp-label b{font-size:16px}}
@@ -302,7 +309,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .cform{display:grid;gap:16px;max-width:560px;margin-top:8px}
 .cform label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:7px}
 .cform input,.cform textarea{width:100%;background:var(--bg-soft);border:1px solid var(--line);
-  color:var(--ink);padding:13px 15px;border-radius:3px;font-family:'Outfit',sans-serif;font-size:15px;transition:border-color .25s}
+  color:var(--ink);padding:13px 15px;border-radius:3px;font-family:var(--font-body);font-size:15px;transition:border-color .25s}
 .cform input:focus,.cform textarea:focus{border-color:var(--accent)}
 .cform textarea{min-height:130px;resize:vertical}
 .cform .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-dim);letter-spacing:0;text-transform:none}
