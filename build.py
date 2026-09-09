@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 
 HERE=os.path.dirname(os.path.abspath(__file__))
 DOMAIN="https://fotokaz.pl"
-# Link plakietki Production Paradise. Podmień na URL profilu Marcina, gdy listing będzie live.
-PP_LISTING_URL="https://www.productionparadise.com/"
+# Link plakietki Production Paradise — profil Marcina.
+PP_LISTING_URL="https://www.productionparadise.com/member/warsaw/marcin-kazmieruk"
 SRC=os.path.join(HERE,"source.html")
 OUT=os.path.join(HERE,"public")
 site=yaml.safe_load(open(os.path.join(HERE,"content","site.yml"),encoding="utf-8"))
