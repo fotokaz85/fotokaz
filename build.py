@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 
 HERE=os.path.dirname(os.path.abspath(__file__))
 DOMAIN="https://fotokaz.pl"
+# Link plakietki Production Paradise. Podmień na URL profilu Marcina, gdy listing będzie live.
+PP_LISTING_URL="https://www.productionparadise.com/"
 SRC=os.path.join(HERE,"source.html")
 OUT=os.path.join(HERE,"public")
 site=yaml.safe_load(open(os.path.join(HERE,"content","site.yml"),encoding="utf-8"))
@@ -116,13 +118,17 @@ def footer_html(lang):
         tag="Marcin Kaźmieruk · Fotografia kulinarna · biznesowa · eventowa · teatralna · ślubna"; priv="Polityka prywatności"
         copy="ELT-Centre Marcin Kaźmieruk · NIP 6112505234 · © 2026. Wszystkie prawa zastrzeżone."; lab={f:pl for f,pl,en in NAV}
     fn="".join(f'<a href="{f}">{lab[f]}</a>' for f,_,_ in NAV)
-    return f'<footer><div class="wrap">\n  <div class="logo">foto<span>kaz</span></div>\n  <div class="tag">{tag}</div>\n  <div class="fnav">{fn}</div>\n  <div class="fnav" style="margin-top:4px"><a href="prywatnosc.html">{priv}</a></div>\n  <div class="copy">{copy}</div>\n</div></footer>'
+    imgpref="../" if lang=="en" else ""
+    badge_alt=("Trusted member of Production Paradise" if lang=="en" else "Zaufany członek Production Paradise")
+    badge=(f'\n  <div class="pp-badge"><a href="{PP_LISTING_URL}" target="_blank" rel="noopener">'
+           f'<img src="{imgpref}images/pp-trusted-member.png" alt="{badge_alt}" loading="lazy" width="180" height="45"></a></div>')
+    return f'<footer><div class="wrap">\n  <div class="logo">foto<span>kaz</span></div>\n  <div class="tag">{tag}</div>\n  <div class="fnav">{fn}</div>\n  <div class="fnav" style="margin-top:4px"><a href="prywatnosc.html">{priv}</a></div>{badge}\n  <div class="copy">{copy}</div>\n</div></footer>'
 
 SCRIPT=open(os.path.join(HERE,"_script.html"),encoding="utf-8").read()
 
 def jsonld(page,lang):
     b=DOMAIN
-    biz='{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia","image":"%s/images/sluby/12.jpg","@id":"%s/#business","url":"%s/","telephone":"+48505183969","email":"fotokaz85@gmail.com","address":{"@type":"PostalAddress","streetAddress":"ul. Podgórze 1A/1","addressLocality":"Jelenia Góra","postalCode":"58-500","addressRegion":"Dolny Śląsk","addressCountry":"PL"},"areaServed":["PL","Europe"],"priceRange":"$$$","sameAs":["https://www.facebook.com/marcin4funphotos","https://www.instagram.com/marcin4funphotos","https://www.instagram.com/fotofoodie"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"133","bestRating":"5"},"founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","award":["#1 Foodelia 2025","IPA 2026","Flash Masters Top 10","Two Mann Studios Scholarship","Osobowość Roku 2025 Jelenia Góra"]},"knowsAbout":["fotografia kulinarna","fotografia komercyjna","fotografia eventowa","fotografia ślubna","fotografia teatralna"]}'%(b,b,b)
+    biz='{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia","image":"%s/images/sluby/12.jpg","@id":"%s/#business","url":"%s/","telephone":"+48505183969","email":"info@fotokaz.com","address":{"@type":"PostalAddress","streetAddress":"ul. Podgórze 1A/1","addressLocality":"Jelenia Góra","postalCode":"58-500","addressRegion":"Dolny Śląsk","addressCountry":"PL"},"areaServed":["PL","Europe"],"priceRange":"$$$","sameAs":["https://www.facebook.com/marcin4funphotos","https://www.instagram.com/marcin4funphotos","https://www.instagram.com/fotofoodie"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"133","bestRating":"5"},"founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","award":["#1 Foodelia 2025","IPA 2026","Flash Masters Top 10","Two Mann Studios Scholarship","Osobowość Roku 2025 Jelenia Góra"]},"knowsAbout":["fotografia kulinarna","fotografia komercyjna","fotografia eventowa","fotografia ślubna","fotografia teatralna"]}'%(b,b,b)
     out=[biz]
     if page=="o-mnie.html":
         out.append('{"@context":"https://schema.org","@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","url":"%s/o-mnie.html","knowsLanguage":["pl","en"]}'%b)
