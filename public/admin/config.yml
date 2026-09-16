@@ -1,0 +1,353 @@
+# Panel edycji fotokaz.pl (Sveltia CMS)
+backend:
+  name: github
+  repo: fotokaz85/fotokaz
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: pl
+
+collections:
+  - name: teksty
+    label: "Teksty strony"
+    files:
+      - name: wszystkie
+        label: "Wszystkie teksty"
+        file: "content/site.yml"
+        fields:
+          - label: "Strona główna — górna linijka nad tytułem"
+            name: hero_kicker
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "Strona główna — podtytuł pod tytułem"
+            name: hero_sub
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "O mnie (strona główna) — akapit 1"
+            name: about_p1
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "O mnie (strona główna) — akapit 2"
+            name: about_p2
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "W skrócie — punkt 1"
+            name: fact1
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 2"
+            name: fact2
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 3"
+            name: fact3
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 4"
+            name: fact4
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 5"
+            name: fact5
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "W skrócie — punkt 6"
+            name: fact6
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "Podtytuł strony — Kulinarna"
+            name: sub_kulinarna
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Biznes"
+            name: sub_biznes
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Hotele"
+            name: sub_hotele
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Wydarzenia"
+            name: sub_wydarzenia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Teatr"
+            name: sub_teatr
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Podtytuł strony — Śluby"
+            name: sub_sluby
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Kulinarna"
+            name: cap_kulinarna
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Biznes"
+            name: cap_biznes
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Hotele"
+            name: cap_hotele
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Wydarzenia"
+            name: cap_wydarzenia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Teatr"
+            name: cap_teatr
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opis nad galerią — Śluby"
+            name: cap_sluby
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinie — plakietka z oceną"
+            name: reviews_badge
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: string }
+              - { label: "Angielski", name: en, widget: string }
+          - label: "Opinie — cytat 1"
+            name: review1_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinie — cytat 2"
+            name: review2_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Opinie — cytat 3"
+            name: review3_quote
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+
+          - label: "Wyróżnienia — wstęp nad nagrodami"
+            name: award_intro
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Wyróżnienia — opis Foodelia"
+            name: award_foodelia
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Wyróżnienia — opis IPA"
+            name: award_ipa
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+          - label: "Wyróżnienia — opis Flash Masters"
+            name: award_flashmasters
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+
+          - label: "Wyróżnienia — opis Spotlight (Production Paradise)"
+            name: award_spotlight
+            widget: object
+            fields:
+              - { label: "Polski", name: pl, widget: text }
+              - { label: "Angielski", name: en, widget: text }
+
+          - { label: "Klucz formularza kontaktowego (Web3Forms)", name: web3_key, widget: string }
+
+          - label: "Wygląd strony — czcionka"
+            name: theme_font
+            widget: select
+            default: fraunces_outfit
+            options:
+              - { label: "Elegancki serif (Fraunces + Outfit) — domyślny", value: fraunces_outfit }
+              - { label: "Redakcyjny (Playfair + Inter)", value: playfair_inter }
+              - { label: "Wysmakowany lekki (Cormorant + Jost)", value: cormorant_jost }
+              - { label: "Nowoczesny (Space Grotesk + Inter)", value: space_inter }
+              - { label: "Klasyczny druk (Libre Baskerville + Source Sans)", value: libre_source }
+          - label: "Wygląd strony — kolor akcentu"
+            name: theme_accent
+            widget: select
+            default: blekit
+            options:
+              - { label: "Błękit — domyślny", value: blekit }
+              - { label: "Złoto", value: zloto }
+              - { label: "Terakota", value: terakota }
+              - { label: "Szałwia (zieleń)", value: szalwia }
+              - { label: "Grafit / srebro", value: grafit }
+          - label: "Wygląd strony — rozmiar tekstu"
+            name: theme_text_size
+            widget: select
+            default: standard
+            options:
+              - { label: "Mniejszy", value: mniejszy }
+              - { label: "Standard", value: standard }
+              - { label: "Większy", value: wiekszy }
+          - label: "Wygląd strony — grubość nagłówków"
+            name: theme_heading_weight
+            widget: select
+            default: "400"
+            options:
+              - { label: "Normalna", value: "400" }
+              - { label: "Średnia", value: "500" }
+              - { label: "Pogrubiona", value: "600" }
+              - { label: "Mocna", value: "700" }
+
+  - name: zdjecia_kategorii
+    label: "Zdjęcia reprezentujące kategorie"
+    description: "Zdjęcie widoczne w pionowych panelach na stronie głównej (hero) oraz w kafelkach sekcji 'Co mogę dla Ciebie sfotografować'. Wybierz z istniejących zdjęć danej kategorii albo wgraj nowe."
+    files:
+      - name: wszystkie
+        label: "Zdjęcia kategorii"
+        file: "content/site.yml"
+        fields:
+          - { label: "Hero (strona główna) — Kulinarna", name: hero_img_kulinarna, widget: image, media_folder: "/images/food", public_folder: "/images/food", choose_url: false }
+          - { label: "Hero (strona główna) — Biznes", name: hero_img_biznes, widget: image, media_folder: "/images/biznes", public_folder: "/images/biznes", choose_url: false }
+          - { label: "Hero (strona główna) — Wydarzenia", name: hero_img_wydarzenia, widget: image, media_folder: "/images/wydarzenia", public_folder: "/images/wydarzenia", choose_url: false }
+          - { label: "Hero (strona główna) — Teatr", name: hero_img_teatr, widget: image, media_folder: "/images/teatr", public_folder: "/images/teatr", choose_url: false }
+          - { label: "Hero (strona główna) — Śluby", name: hero_img_sluby, widget: image, media_folder: "/images/sluby", public_folder: "/images/sluby", choose_url: false }
+          - { label: "Kafelek — Kulinarna", name: cat_img_kulinarna, widget: image, media_folder: "/images/food", public_folder: "/images/food", choose_url: false }
+          - { label: "Kafelek — Biznes", name: cat_img_biznes, widget: image, media_folder: "/images/biznes", public_folder: "/images/biznes", choose_url: false }
+          - { label: "Kafelek — Hotele", name: cat_img_hotele, widget: image, media_folder: "/images/hotele", public_folder: "/images/hotele", choose_url: false }
+          - { label: "Kafelek — Wydarzenia", name: cat_img_wydarzenia, widget: image, media_folder: "/images/wydarzenia", public_folder: "/images/wydarzenia", choose_url: false }
+          - { label: "Kafelek — Teatr", name: cat_img_teatr, widget: image, media_folder: "/images/teatr", public_folder: "/images/teatr", choose_url: false }
+          - { label: "Kafelek — Śluby", name: cat_img_sluby, widget: image, media_folder: "/images/sluby", public_folder: "/images/sluby", choose_url: false }
+
+  - name: galerie
+    label: "Galerie zdjęć"
+    description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."
+    files:
+      - name: wszystkie
+        label: "Zdjęcia w galeriach"
+        file: "content/galleries.yml"
+        fields:
+          - label: "Galeria — Kulinarna"
+            name: kulinarna
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/food"
+              public_folder: "/images/food"
+              choose_url: false
+          - label: "Galeria — Biznes"
+            name: biznes
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/biznes"
+              public_folder: "/images/biznes"
+              choose_url: false
+          - label: "Galeria — Hotele"
+            name: hotele
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/hotele"
+              public_folder: "/images/hotele"
+              choose_url: false
+          - label: "Galeria — Wydarzenia"
+            name: wydarzenia
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/wydarzenia"
+              public_folder: "/images/wydarzenia"
+              choose_url: false
+          - label: "Galeria — Teatr"
+            name: teatr
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/teatr"
+              public_folder: "/images/teatr"
+              choose_url: false
+          - label: "Galeria — Śluby"
+            name: sluby
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/sluby"
+              public_folder: "/images/sluby"
+              choose_url: false
+          - label: "Galeria — Wyróżnienia (nagrody, certyfikaty)"
+            name: wyroznienia
+            widget: list
+            allow_add: true
+            field:
+              label: "Zdjęcie"
+              name: image
+              widget: image
+              media_folder: "/images/wyroznienia"
+              public_folder: "/images/wyroznienia"
+              choose_url: false
