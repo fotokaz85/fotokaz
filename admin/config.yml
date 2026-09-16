@@ -246,6 +246,26 @@ collections:
               - { label: "Pogrubiona", value: "600" }
               - { label: "Mocna", value: "700" }
 
+  - name: zdjecia_kategorii
+    label: "Zdjęcia reprezentujące kategorie"
+    description: "Zdjęcie widoczne w pionowych panelach na stronie głównej (hero) oraz w kafelkach sekcji 'Co mogę dla Ciebie sfotografować'. Wybierz z istniejących zdjęć danej kategorii albo wgraj nowe."
+    files:
+      - name: wszystkie
+        label: "Zdjęcia kategorii"
+        file: "content/site.yml"
+        fields:
+          - { label: "Hero (strona główna) — Kulinarna", name: hero_img_kulinarna, widget: image, media_folder: "/images/food", public_folder: "/images/food", choose_url: false }
+          - { label: "Hero (strona główna) — Biznes", name: hero_img_biznes, widget: image, media_folder: "/images/biznes", public_folder: "/images/biznes", choose_url: false }
+          - { label: "Hero (strona główna) — Wydarzenia", name: hero_img_wydarzenia, widget: image, media_folder: "/images/wydarzenia", public_folder: "/images/wydarzenia", choose_url: false }
+          - { label: "Hero (strona główna) — Teatr", name: hero_img_teatr, widget: image, media_folder: "/images/teatr", public_folder: "/images/teatr", choose_url: false }
+          - { label: "Hero (strona główna) — Śluby", name: hero_img_sluby, widget: image, media_folder: "/images/sluby", public_folder: "/images/sluby", choose_url: false }
+          - { label: "Kafelek — Kulinarna", name: cat_img_kulinarna, widget: image, media_folder: "/images/food", public_folder: "/images/food", choose_url: false }
+          - { label: "Kafelek — Biznes", name: cat_img_biznes, widget: image, media_folder: "/images/biznes", public_folder: "/images/biznes", choose_url: false }
+          - { label: "Kafelek — Hotele", name: cat_img_hotele, widget: image, media_folder: "/images/hotele", public_folder: "/images/hotele", choose_url: false }
+          - { label: "Kafelek — Wydarzenia", name: cat_img_wydarzenia, widget: image, media_folder: "/images/wydarzenia", public_folder: "/images/wydarzenia", choose_url: false }
+          - { label: "Kafelek — Teatr", name: cat_img_teatr, widget: image, media_folder: "/images/teatr", public_folder: "/images/teatr", choose_url: false }
+          - { label: "Kafelek — Śluby", name: cat_img_sluby, widget: image, media_folder: "/images/sluby", public_folder: "/images/sluby", choose_url: false }
+
   - name: galerie
     label: "Galerie zdjęć"
     description: "Klikasz w galerię, przeciągasz zdjęcia (kolejność), dodajesz nowe lub usuwasz."

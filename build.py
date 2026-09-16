@@ -60,6 +60,19 @@ NAV=[("kulinarna.html","Kulinarna","Food"),("biznes.html","Biznes","Business"),
      ("sluby.html","Śluby","Weddings"),("wyroznienia.html","Wyróżnienia","Awards"),
      ("o-mnie.html","O mnie","About"),("kontakt.html","Kontakt","Contact")]
 SPEC_FILES={"kulinarna.html","biznes.html","hotele.html","wydarzenia.html","teatr.html","sluby.html"}
+IMG_SLOTS={
+ "HERO_IMG_KULINARNA":("hero_img_kulinarna","images/food/51.webp"),
+ "HERO_IMG_BIZNES":("hero_img_biznes","images/biznes/11.webp"),
+ "HERO_IMG_WYDARZENIA":("hero_img_wydarzenia","images/wydarzenia/30.webp"),
+ "HERO_IMG_TEATR":("hero_img_teatr","images/teatr/06.webp"),
+ "HERO_IMG_SLUBY":("hero_img_sluby","images/sluby/12.webp"),
+ "CAT_IMG_KULINARNA":("cat_img_kulinarna","images/food/07.webp"),
+ "CAT_IMG_BIZNES":("cat_img_biznes","images/biznes/05.webp"),
+ "CAT_IMG_HOTELE":("cat_img_hotele","images/hotele/05.webp"),
+ "CAT_IMG_WYDARZENIA":("cat_img_wydarzenia","images/wydarzenia/12.webp"),
+ "CAT_IMG_TEATR":("cat_img_teatr","images/teatr/03.webp"),
+ "CAT_IMG_SLUBY":("cat_img_sluby","images/sluby/05.webp"),
+}
 
 GAL_ALT={'kulinarna':'Fotografia kulinarna','biznes':'Fotografia biznesowa i portret',
          'hotele':'Fotografia wnętrz hotelowych','wydarzenia':'Fotografia eventowa',
@@ -155,6 +168,9 @@ def build(page,lang):
     inner=transform(ppage.decode_contents(),lang)
     inner=apply_content(inner,lang)
     inner=inner.replace('WEB3KEY_PLACEHOLDER', str(site.get('web3_key','')))
+    for tok,(key,default) in IMG_SLOTS.items():
+        val=(site.get(key) or default).lstrip('/')
+        inner=inner.replace(tok, val)
     for cat in GAL_ALT:                          # wstaw galerie z galleries.yml
         inner=inner.replace(f'<!--GALLERY:{cat}-->', render_gallery(cat))
     if lang=="en":
