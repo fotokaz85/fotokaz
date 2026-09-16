@@ -1,6 +1,25 @@
 <script>
 var btn=document.querySelector('.menu-btn'), links=document.querySelector('.links');
 if(btn) btn.addEventListener('click',function(){links.classList.toggle('open');});
+document.querySelectorAll('.nav-drop').forEach(function(d){
+  var b=d.querySelector('button');
+  b.addEventListener('click',function(ev){
+    ev.stopPropagation();
+    var isOpen=d.classList.toggle('open');
+    b.setAttribute('aria-expanded', isOpen?'true':'false');
+  });
+});
+document.addEventListener('click',function(){
+  document.querySelectorAll('.nav-drop.open').forEach(function(d){
+    d.classList.remove('open');
+    d.querySelector('button').setAttribute('aria-expanded','false');
+  });
+});
+document.addEventListener('keydown',function(ev){
+  if(ev.key==='Escape'){
+    document.querySelectorAll('.nav-drop.open').forEach(function(d){d.classList.remove('open');});
+  }
+});
 var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 var imgs=[].slice.call(document.querySelectorAll('.masonry .item img'));

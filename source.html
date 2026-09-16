@@ -76,6 +76,36 @@ nav .links a:hover::after,nav .links a.active::after{width:100%}
 nav .lang{margin-left:8px;font-size:12px;letter-spacing:.1em;border:1px solid var(--line);padding:5px 11px;border-radius:2px;color:var(--ink-faint);text-decoration:none;transition:.25s}
 nav .lang:hover{border-color:var(--accent);color:var(--accent-soft)}
 .menu-btn{display:none;background:none;border:none;color:var(--ink);font-size:26px;cursor:pointer;line-height:1}
+nav .links .nav-drop{position:relative}
+nav .links .nav-drop>button{background:none;border:none;font:inherit;color:var(--ink-dim);text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:5px;transition:color .25s}
+nav .links .nav-drop>button .car{font-size:10px;transition:transform .25s}
+nav .links .nav-drop>button:hover,nav .links .nav-drop>button.active,nav .links .nav-drop.open>button{color:var(--accent-soft)}
+nav .links .nav-drop.open>button .car{transform:rotate(180deg)}
+nav .links .nav-drop-menu{
+  position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%);
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;
+  min-width:180px;padding:8px 0;display:none;flex-direction:column;z-index:110;
+  box-shadow:0 18px 40px rgba(0,0,0,.4);
+}
+nav .links .nav-drop.open .nav-drop-menu{display:flex}
+nav .links .nav-drop-menu a{padding:10px 20px;text-transform:none;letter-spacing:.02em;font-size:14px}
+nav .links .nav-drop-menu a::after{display:none}
+@media(hover:hover) and (min-width:861px){
+  nav .links .nav-drop:hover .nav-drop-menu{display:flex}
+  nav .links .nav-drop:hover>button .car{transform:rotate(180deg)}
+}
+.hero-cta{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.hero-cta a{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:.25s;border-radius:2px}
+.hero-cta a.primary{background:var(--accent);color:var(--bg);border:1px solid var(--accent)}
+.hero-cta a.primary:hover{opacity:.88}
+.hero-cta a.ghost{border:1px solid var(--line);color:var(--ink)}
+.hero-cta a.ghost:hover{border-color:var(--accent);color:var(--accent-soft)}
+@media(max-width:860px){
+  nav .links .nav-drop-menu{position:static;transform:none;border:none;background:none;box-shadow:none;padding:6px 0 0 14px;min-width:0;display:none}
+  nav .links .nav-drop.open .nav-drop-menu{display:flex}
+  nav .links .nav-drop>button{width:100%;justify-content:space-between}
+}
+
 
 /* ---------- SECTIONS ---------- */
 section{padding:120px 0}
@@ -347,7 +377,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <meta content="Marcin Kaźmieruk" name="author"/>
 <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia",
-   "image":"images/hero-collage.jpg","@id":"https://fotokaz.pl","url":"https://fotokaz.pl",
+   "image":"images/hero-collage.webp","@id":"https://fotokaz.pl","url":"https://fotokaz.pl",
    "telephone":"+48505183969","email":"info@fotokaz.com",
    "address":{"@type":"PostalAddress","addressLocality":"Jelenia Góra","addressRegion":"Dolny Śląsk","addressCountry":"PL"},
    "areaServed":"Worldwide","priceRange":"$$",
@@ -386,7 +416,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <main id="main">
 <div class="ppage" data-page="index.html">
 <header class="hero">
-<div class="hero-grid"><a aria-label="Kulinarna" class="hpanel" href="kulinarna.html"><img alt="" loading="eager" src="images/food/51.jpg"/><span class="hp-label"><b data-en="Food">Kulinarna</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Biznes" class="hpanel" href="biznes.html"><img alt="" loading="eager" src="images/biznes/11.jpg"/><span class="hp-label"><b data-en="Business">Biznes</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Wydarzenia" class="hpanel" href="wydarzenia.html"><img alt="" loading="eager" src="images/wydarzenia/30.jpg"/><span class="hp-label"><b data-en="Events">Wydarzenia</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Teatr" class="hpanel" href="teatr.html"><img alt="" loading="eager" src="images/teatr/06.jpg"/><span class="hp-label"><b data-en="Theatre">Teatr</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Śluby" class="hpanel" href="sluby.html"><img alt="" loading="eager" src="images/sluby/12.jpg"/><span class="hp-label"><b data-en="Weddings">Śluby</b><i data-en="View →">Zobacz →</i></span></a></div>
+<div class="hero-grid"><a aria-label="Kulinarna" class="hpanel" href="kulinarna.html"><img alt="" loading="eager" src="images/food/51.webp"/><span class="hp-label"><b data-en="Food">Kulinarna</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Biznes" class="hpanel" href="biznes.html"><img alt="" loading="eager" src="images/biznes/11.webp"/><span class="hp-label"><b data-en="Business">Biznes</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Wydarzenia" class="hpanel" href="wydarzenia.html"><img alt="" loading="eager" src="images/wydarzenia/30.webp"/><span class="hp-label"><b data-en="Events">Wydarzenia</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Teatr" class="hpanel" href="teatr.html"><img alt="" loading="eager" src="images/teatr/06.webp"/><span class="hp-label"><b data-en="Theatre">Teatr</b><i data-en="View →">Zobacz →</i></span></a><a aria-label="Śluby" class="hpanel" href="sluby.html"><img alt="" loading="eager" src="images/sluby/12.webp"/><span class="hp-label"><b data-en="Weddings">Śluby</b><i data-en="View →">Zobacz →</i></span></a></div>
 <div class="wrap hero-copy">
 <div class="kicker reveal" data-en="Food · business · events · theatre · wedding photography · Poland">Fotografia kulinarna · biznesowa · eventowa · teatralna · ślubna · Jelenia Góra</div>
 <h1 class="reveal" data-en='Capturing&lt;br&gt;what is &lt;span class="it"&gt;real&lt;/span&gt;'>Uchwycić<br/>to, co <span class="it">prawdziwe</span></h1>
@@ -397,6 +427,10 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="item"><div class="n">2017</div><div class="l" data-en="Beats for Love photographer">Fotograf Beats for Love</div></div>
 <div class="item"><div class="n">100%</div><div class="l" data-en="Recommended · 306 reviews">Rekomendacji · 306 opinii</div></div>
 </div>
+<div class="hero-cta reveal">
+<a class="primary" href="kontakt.html" data-en="Book a session">Umów sesję</a>
+<a class="ghost" href="tel:+48505183969" data-en="Call +48 505 183 969">Zadzwoń +48 505 183 969</a>
+</div>
 </div>
 </header>
 <!-- KATEGORIE -->
@@ -405,43 +439,43 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="What I do">Specjalizacje</div>
 <h2 class="sec-title reveal" data-en='What I can &lt;span class="it"&gt;shoot for you&lt;/span&gt;'>Co mogę dla Ciebie <span class="it">sfotografować</span></h2>
 <div class="cat-grid">
-<a class="cat-card reveal" href="kulinarna.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/food/07.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="kulinarna.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/food/07.webp"/><span class="cat-scrim"></span>
 <div class="num">01</div>
 <h3 data-en="Food photography">Fotografia kulinarna</h3>
 <p data-en="Ranked #1 food photographer on Foodelia 2025. Dishes, menus and the mood of the place.">#1 wśród fotografów kulinarnych Foodelia 2025. Dania, menu, atmosfera lokalu.</p>
 <span class="go" data-en="View →">Zobacz →</span>
 </a>
-<a class="cat-card reveal" href="biznes.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/biznes/05.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="biznes.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/biznes/05.webp"/><span class="cat-scrim"></span>
 <div class="num">02</div>
 <h3 data-en="Business &amp; Portrait">Biznes i portret</h3>
 <p data-en="Restaurant interiors, brand and personal portraits for companies and public figures.">Wnętrza restauracji, portret wizerunkowy dla marek i osobistości.</p>
 <span class="go" data-en="View →">Zobacz →</span>
 </a>
-<a class="cat-card reveal" href="hotele.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/hotele/05.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="hotele.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/hotele/05.webp"/><span class="cat-scrim"></span>
 <div class="num">03</div>
 <h3 data-en="Hotels &amp; Interiors">Hotele i wnętrza</h3>
 <p data-en="Hotels, restaurants and interiors that make a guest want to be there before they arrive.">Hotele, restauracje i wnętrza, które sprawiają, że gość chce tam być, zanim przyjedzie.</p>
 <span class="go" data-en="View →">Zobacz →</span>
 </a>
-<a class="cat-card reveal" href="wydarzenia.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/wydarzenia/12.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="wydarzenia.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/wydarzenia/12.webp"/><span class="cat-scrim"></span>
 <div class="num">04</div>
 <h3 data-en="Events &amp; Stage">Wydarzenia i scena</h3>
 <p data-en="Festivals, galas, concerts. Beats for Love, Gault&amp;Millau, Bocuse d'Or, Opole.">Festiwale, gale, koncerty. Beats for Love, Gault&amp;Millau, Bocuse d'Or, Opole.</p>
 <span class="go" data-en="View →">Zobacz →</span>
 </a>
-<a class="cat-card reveal" href="teatr.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/teatr/03.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="teatr.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/teatr/03.webp"/><span class="cat-scrim"></span>
 <div class="num">05</div>
 <h3 data-en="Theatre">Teatr</h3>
 <p data-en="Resident photographer of the Norwid Theatre. Performances, rehearsals, theatre festivals.">Stały fotograf Teatru im. Norwida. Spektakle, próby, festiwale teatralne.</p>
 <span class="go" data-en="View →">Zobacz →</span>
 </a>
-<a class="cat-card reveal" href="sluby.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/sluby/05.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="sluby.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/sluby/05.webp"/><span class="cat-scrim"></span>
 <div class="num">06</div>
 <h3 data-en="Weddings">Śluby</h3>
 <p data-en="Documentary coverage of your big day. Flash Masters and Fearless awards, Two Mann Studios scholarship.">Reportaż z najważniejszego dnia. Wyróżnienia Flash Masters, Fearless i stypendium Two Mann Studios.</p>
 <span class="go" data-en="View →">Zobacz →</span>
 </a>
-<a class="cat-card reveal" href="wyroznienia.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/food/15.jpg"/><span class="cat-scrim"></span>
+<a class="cat-card reveal" href="wyroznienia.html"><img alt="" aria-hidden="true" class="cat-bg" src="images/food/15.webp"/><span class="cat-scrim"></span>
 <div class="num">★</div>
 <h3 data-en="Awards &amp; Press">Wyróżnienia i prasa</h3>
 <p data-en="IPA 2026 (1st Place), Foodelia #1, Forbes, Newsweek, Flash Masters, Personality of the Year.">IPA 2026 (1. miejsce), Foodelia #1, Forbes, Newsweek, Flash Masters, Osobowość Roku.</p>
@@ -461,7 +495,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <a class="btn" data-en="Read the full story" href="o-mnie.html" style="margin-top:14px">Poznaj całą historię</a>
 </div>
 <div class="about-side reveal">
-<img alt="Marcin Kaźmieruk" loading="lazy" src="images/marcin.jpg" style="width:100%;border-radius:8px;margin-bottom:22px;display:block"/>
+<img alt="Marcin Kaźmieruk" loading="lazy" src="images/marcin.webp" style="width:100%;border-radius:8px;margin-bottom:22px;display:block"/>
 <h3 data-en="In short">W skrócie</h3>
 <ul>
 <li data-en="I travel wherever you need me, Poland and the world">Jeżdżę tam, gdzie mnie potrzebujecie, Polska i świat</li>
@@ -480,7 +514,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Reviews">Opinie</div>
 <div class="rev-head reveal">
 <h2 class="sec-title" data-en='What clients &lt;span class="it"&gt;say&lt;/span&gt;' style="margin:0">Co mówią <span class="it">klienci</span></h2>
-<span class="rev-badge"><span class="stars">★★★★★</span><span class="rb-t" data-en="&lt;b&gt;5.0 / 5&lt;/b&gt; · 133 reviews on Google, 309 on Facebook"><b>5,0 / 5</b> · 133 opinie na Google, 309 na Facebooku</span></span>
+<a class="rev-badge" href="https://g.page/r/CUAzjc7ee02mEBM/review" target="_blank" rel="noopener" style="text-decoration:none"><span class="stars">★★★★★</span><span class="rb-t" data-en="&lt;b&gt;5.0 / 5&lt;/b&gt; · 133 reviews on Google, 309 on Facebook"><b>5,0 / 5</b> · 133 opinie na Google, 309 na Facebooku</span></a>
 </div>
 <div class="rev-grid">
 <figure class="rev-card reveal">
@@ -559,7 +593,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <p class="sec-intro reveal" data-en="Behind each of these awards are years of work and hundreds of frames. Here are the ones that mean the most to me, and why.">Za każdą z tych nagród stoją lata pracy i setki kadrów. Oto te, które znaczą dla mnie najwięcej, i dlaczego.</p>
 <div class="awards-feature">
 <div class="afeat reveal">
-<div class="af-media"><img src="images/food/51.jpg" alt="Foodelia numer 1 na świecie — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-media"><img src="images/food/51.webp" alt="Foodelia numer 1 na świecie — Marcin Kaźmieruk" loading="lazy"></div>
 <div class="af-text">
 <div class="af-kicker" data-en="#1 in the world · Foodelia 2025">#1 na świecie · Foodelia 2025</div>
 <h3 data-en="Number one, earned over a whole year">Numer jeden, wypracowany przez cały rok</h3>
@@ -567,7 +601,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 </div>
 </div>
 <div class="afeat rev reveal">
-<div class="af-media pair"><img src="images/wyroznienia/seal-1.jpg" alt="IPA 2026 druga nagroda Professional — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/seal-2.jpg" alt="IPA 2026 wyróżnienie — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-media pair"><img src="images/wyroznienia/seal-1.webp" alt="IPA 2026 druga nagroda Professional — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/seal-2.webp" alt="IPA 2026 wyróżnienie — Marcin Kaźmieruk" loading="lazy"></div>
 <div class="af-text">
 <div class="af-kicker" data-en="International Photography Awards 2026">International Photography Awards 2026</div>
 <h3 data-en="On the podium, judged worldwide">Na podium, w ocenie całego świata</h3>
@@ -575,7 +609,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 </div>
 </div>
 <div class="afeat reveal">
-<div class="af-media pair"><img src="images/wyroznienia/fm-1.jpg" alt="Flash Masters Top 10 na świecie — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/fm-2.jpg" alt="Flash Masters Environmental Photography Top 10 — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-media pair"><img src="images/wyroznienia/fm-1.webp" alt="Flash Masters Top 10 na świecie — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/fm-2.webp" alt="Flash Masters Environmental Photography Top 10 — Marcin Kaźmieruk" loading="lazy"></div>
 <div class="af-text">
 <div class="af-kicker" data-en="Flash Masters · Top 10 in the world">Flash Masters · Top 10 na świecie</div>
 <h3 data-en="In the world's top ten">W pierwszej dziesiątce świata</h3>
@@ -915,6 +949,18 @@ if(cf){ cf.addEventListener('submit',function(e){
 <form class="cform reveal" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="WEB3KEY_PLACEHOLDER"/><input type="hidden" name="subject" value="Nowe zapytanie ze strony fotokaz.pl"/><input type="hidden" name="from_name" value="fotokaz.pl"/><input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
 <div><label data-en="Name" for="cf-name">Imię i nazwisko</label><input id="cf-name" name="name" required=""/></div>
 <div><label data-en="E-mail" for="cf-email">E-mail</label><input id="cf-email" name="email" required="" type="email"/></div>
+<div><label data-en="Session type" for="cf-type">Rodzaj sesji</label><select id="cf-type" name="rodzaj_sesji">
+<option data-en="Select..." value="">Wybierz...</option>
+<option data-en="Wedding" value="Slub">Ślub</option>
+<option data-en="Food / restaurant" value="Kulinarna">Kulinarna / restauracja</option>
+<option data-en="Business / brand" value="Biznes">Biznes / marka</option>
+<option data-en="Hotel / interior" value="Hotel">Hotel / wnętrze</option>
+<option data-en="Event" value="Wydarzenie">Wydarzenie</option>
+<option data-en="Theatre" value="Teatr">Teatr</option>
+<option data-en="Other" value="Inne">Inne</option>
+</select></div>
+<div><label data-en="Approximate date" for="cf-date">Orientacyjna data</label><input id="cf-date" name="data" type="text" placeholder="np. czerwiec 2027" data-en-placeholder="e.g. June 2027"/></div>
+<div><label data-en="Location" for="cf-loc">Lokalizacja</label><input id="cf-loc" name="lokalizacja" type="text" placeholder="Miasto / miejsce" data-en-placeholder="City / venue"/></div>
 <div><label data-en="Message" for="cf-msg">Wiadomość</label><textarea id="cf-msg" name="msg" required=""></textarea></div>
 <label class="consent"><input required="" type="checkbox" name="zgoda" value="tak"/><span data-en="I agree that my data will be used to answer this enquiry.">Zgadzam się na wykorzystanie moich danych w celu odpowiedzi na zapytanie (<a href="prywatnosc.html" style="color:var(--accent-soft)">polityka prywatności</a>).</span></label>
 <button data-en="Send message" type="submit">Wyślij wiadomość</button>

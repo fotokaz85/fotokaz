@@ -59,6 +59,7 @@ NAV=[("kulinarna.html","Kulinarna","Food"),("biznes.html","Biznes","Business"),
      ("wydarzenia.html","Wydarzenia","Events"),("teatr.html","Teatr","Theatre"),
      ("sluby.html","Śluby","Weddings"),("wyroznienia.html","Wyróżnienia","Awards"),
      ("o-mnie.html","O mnie","About"),("kontakt.html","Kontakt","Contact")]
+SPEC_FILES={"kulinarna.html","biznes.html","hotele.html","wydarzenia.html","teatr.html","sluby.html"}
 
 GAL_ALT={'kulinarna':'Fotografia kulinarna','biznes':'Fotografia biznesowa i portret',
          'hotele':'Fotografia wnętrz hotelowych','wydarzenia':'Fotografia eventowa',
@@ -83,6 +84,11 @@ def transform(inner_html, lang):
             for c in list(BeautifulSoup(en,"html.parser").contents): node.append(c)
         del node["data-en"]
         if node.has_attr("data-pl"): del node["data-pl"]
+    for node in frag.find_all(attrs={"data-en-placeholder":True}):
+        en=node.get("data-en-placeholder")
+        if lang=="en":
+            node["placeholder"]=en
+        del node["data-en-placeholder"]
     return frag.decode_contents()
 
 def apply_content(html, lang):
@@ -102,13 +108,21 @@ def render_gallery(cat):
 
 def nav_html(cur,lang):
     logo='<a href="index.html" class="logo" aria-label="Marcin Kaźmieruk Fotografia — strona główna">foto<span>kaz</span></a>'
-    items=""
+    spec_items=""
     for f,pl,en in NAV:
+        if f not in SPEC_FILES: continue
         act=' class="active"' if f==cur else ''
-        items+=f'<a href="{f}"{act}>{en if lang=="en" else pl}</a>'
+        spec_items+=f'<a href="{f}"{act}>{en if lang=="en" else pl}</a>'
+    drop_active=' active' if cur in SPEC_FILES else ''
+    portfolio=f'<div class="nav-drop"><button type="button" class="{drop_active.strip()}" aria-expanded="false" aria-haspopup="true">Portfolio <span class="car" aria-hidden="true">&#9662;</span></button><div class="nav-drop-menu">{spec_items}</div></div>'
+    rest_items=""
+    for f,pl,en in NAV:
+        if f in SPEC_FILES: continue
+        act=' class="active"' if f==cur else ''
+        rest_items+=f'<a href="{f}"{act}>{en if lang=="en" else pl}</a>'
     lang_link=(f'<a href="../{cur}" class="lang" hreflang="pl">PL</a>' if lang=="en"
                else f'<a href="en/{cur}" class="lang" hreflang="en">EN</a>')
-    return f'<nav>\n  {logo}\n  <div class="links">{items}{lang_link}</div>\n  <button class="menu-btn" aria-label="Menu">&#9776;</button>\n</nav>'
+    return f'<nav>\n  {logo}\n  <div class="links">{portfolio}{rest_items}{lang_link}</div>\n  <button class="menu-btn" aria-label="Menu">&#9776;</button>\n</nav>'
 
 def footer_html(lang):
     if lang=="en":
@@ -128,7 +142,7 @@ SCRIPT=open(os.path.join(HERE,"_script.html"),encoding="utf-8").read()
 
 def jsonld(page,lang):
     b=DOMAIN
-    biz='{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia","image":"%s/images/sluby/12.jpg","@id":"%s/#business","url":"%s/","telephone":"+48505183969","email":"info@fotokaz.com","address":{"@type":"PostalAddress","streetAddress":"ul. Podgórze 1A/1","addressLocality":"Jelenia Góra","postalCode":"58-500","addressRegion":"Dolny Śląsk","addressCountry":"PL"},"areaServed":["PL","Europe"],"priceRange":"$$$","sameAs":["https://www.facebook.com/marcin4funphotos","https://www.instagram.com/marcin4funphotos","https://www.instagram.com/fotofoodie"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"133","bestRating":"5"},"founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","award":["#1 Foodelia 2025","IPA 2026","Flash Masters Top 10","Two Mann Studios Scholarship","Osobowość Roku 2025 Jelenia Góra"]},"knowsAbout":["fotografia kulinarna","fotografia komercyjna","fotografia eventowa","fotografia ślubna","fotografia teatralna"]}'%(b,b,b)
+    biz='{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia","image":"%s/images/sluby/12.webp","@id":"%s/#business","url":"%s/","telephone":"+48505183969","email":"info@fotokaz.pl","address":{"@type":"PostalAddress","streetAddress":"ul. Podgórze 1A/1","addressLocality":"Jelenia Góra","postalCode":"58-500","addressRegion":"Dolny Śląsk","addressCountry":"PL"},"areaServed":["PL","Europe"],"priceRange":"$$$","sameAs":["https://www.facebook.com/marcin4funphotos","https://www.instagram.com/marcin4funphotos","https://www.instagram.com/fotofoodie"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"133","bestRating":"5"},"founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","award":["#1 Foodelia 2025","IPA 2026","Flash Masters Top 10","Two Mann Studios Scholarship","Osobowość Roku 2025 Jelenia Góra"]},"knowsAbout":["fotografia kulinarna","fotografia komercyjna","fotografia eventowa","fotografia ślubna","fotografia teatralna"]}'%(b,b,b)
     out=[biz]
     if page=="o-mnie.html":
         out.append('{"@context":"https://schema.org","@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","url":"%s/o-mnie.html","knowsLanguage":["pl","en"]}'%b)
@@ -150,7 +164,7 @@ def build(page,lang):
     else:
         cssref="style.css"; canon=(f"{DOMAIN}/" if page=="index.html" else f"{DOMAIN}/{page}"); loc="pl_PL"; hl="pl"
         alt_pl=canon; alt_en=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}")
-    ogimg=f"{DOMAIN}/images/food/51.jpg"
+    ogimg=f"{DOMAIN}/images/food/51.webp"
     robots='<meta name="robots" content="noindex,follow">' if cfg.get("noindex") else '<meta name="robots" content="index,follow,max-image-preview:large">'
     doc=f'''<!DOCTYPE html>
 <html lang="{hl}">
@@ -204,7 +218,49 @@ for page in pages_cfg:
         urls.append(f"  <url><loc>{loc}</loc><changefreq>monthly</changefreq><priority>{pr}</priority></url>")
 open(os.path.join(OUT,"sitemap.xml"),"w",encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"\n".join(urls)+"\n</urlset>\n")
 open(os.path.join(OUT,"robots.txt"),"w",encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /prywatnosc.html\nDisallow: /en/prywatnosc.html\nDisallow: /admin/\n\nSitemap: {DOMAIN}/sitemap.xml\n")
+
+# ---- strona 404 ----
+def page_404(lang):
+    if lang=="en":
+        title="Page not found | Marcin Kaźmieruk Photography"
+        h1="Page not found"; p="This page doesn't exist or has moved. Head back to the homepage."
+        btn="Back to homepage"; cssref="../style.css"; home="../index.html"
+    else:
+        title="Nie znaleziono strony | Marcin Kaźmieruk Fotografia"
+        h1="404 — nie znaleziono strony"; p="Ta strona nie istnieje albo została przeniesiona. Wróć na stronę główną."
+        btn="Wróć na stronę główną"; cssref="style.css"; home="index.html"
+    body=f'''<section class="page-hero"><div class="wrap" style="text-align:center">
+<h1>{h1}</h1>
+<p style="margin:20px auto 34px;max-width:520px">{p}</p>
+<a href="{home}" style="display:inline-flex;padding:15px 30px;border:1px solid var(--accent);color:var(--ink);text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:13px;border-radius:2px">{btn}</a>
+</div></section>'''
+    return f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{esc(title)}</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0a0e1a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{cssref}">
+</head>
+<body>
+{nav_html("404.html",lang)}
+<main id="main">{body}</main>
+{footer_html(lang)}
+{SCRIPT}
+</body>
+</html>'''
+
+open(os.path.join(OUT,"404.html"),"w",encoding="utf-8").write(page_404("pl"))
+open(os.path.join(OUT,"en","404.html"),"w",encoding="utf-8").write(page_404("en"))
+
 for d in ("images","admin"):
     sp=os.path.join(HERE,d)
     if os.path.isdir(sp): shutil.copytree(sp, os.path.join(OUT,d), dirs_exist_ok=True)
+hp=os.path.join(HERE,"_headers")
+if os.path.isfile(hp): shutil.copy(hp, os.path.join(OUT,"_headers"))
 print("OK build ->", OUT)
