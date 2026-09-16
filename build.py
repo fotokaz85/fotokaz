@@ -53,6 +53,8 @@ THEME_STYLE=('<style>:root{'
 
 soup=BeautifulSoup(open(SRC,encoding="utf-8").read(),"html.parser")
 css=soup.find("style").text+"\n.ppage{display:block}\n"
+import hashlib
+CSS_VER=hashlib.md5(css.encode("utf-8")).hexdigest()[:8]
 
 NAV=[("kulinarna.html","Kulinarna","Food"),("biznes.html","Biznes","Business"),
      ("hotele.html","Hotele","Hotels"),
@@ -175,10 +177,10 @@ def build(page,lang):
         inner=inner.replace(f'<!--GALLERY:{cat}-->', render_gallery(cat))
     if lang=="en":
         inner=re.sub(r'(src|href)="images/', r'\1="../images/', inner)
-        cssref="../style.css"; canon=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}"); loc="en_GB"; hl="en"
+        cssref=f"../style.css?v={CSS_VER}"; canon=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}"); loc="en_GB"; hl="en"
         alt_pl=(f"{DOMAIN}/" if page=="index.html" else f"{DOMAIN}/{page}"); alt_en=canon
     else:
-        cssref="style.css"; canon=(f"{DOMAIN}/" if page=="index.html" else f"{DOMAIN}/{page}"); loc="pl_PL"; hl="pl"
+        cssref=f"style.css?v={CSS_VER}"; canon=(f"{DOMAIN}/" if page=="index.html" else f"{DOMAIN}/{page}"); loc="pl_PL"; hl="pl"
         alt_pl=canon; alt_en=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}")
     ogimg=f"{DOMAIN}/images/food/51.webp"
     robots='<meta name="robots" content="noindex,follow">' if cfg.get("noindex") else '<meta name="robots" content="index,follow,max-image-preview:large">'
@@ -240,11 +242,11 @@ def page_404(lang):
     if lang=="en":
         title="Page not found | Marcin Kaźmieruk Photography"
         h1="Page not found"; p="This page doesn't exist or has moved. Head back to the homepage."
-        btn="Back to homepage"; cssref="../style.css"; home="../index.html"
+        btn="Back to homepage"; cssref=f"../style.css?v={CSS_VER}"; home="../index.html"
     else:
         title="Nie znaleziono strony | Marcin Kaźmieruk Fotografia"
         h1="404 — nie znaleziono strony"; p="Ta strona nie istnieje albo została przeniesiona. Wróć na stronę główną."
-        btn="Wróć na stronę główną"; cssref="style.css"; home="index.html"
+        btn="Wróć na stronę główną"; cssref=f"style.css?v={CSS_VER}"; home="index.html"
     body=f'''<section class="page-hero"><div class="wrap" style="text-align:center">
 <h1>{h1}</h1>
 <p style="margin:20px auto 34px;max-width:520px">{p}</p>
