@@ -192,6 +192,7 @@ def footer_html(lang):
     return f'<footer><div class="wrap">\n  <div class="logo">foto<span>kaz</span></div>\n  <div class="tag">{tag}</div>\n  <div class="fnav">{fn}</div>\n  <div class="fnav" style="margin-top:4px"><a href="prywatnosc.html">{priv}</a></div>{badge}\n  <div class="copy">{copy}</div>\n</div></footer>'
 
 SCRIPT=open(os.path.join(HERE,"_script.html"),encoding="utf-8").read()
+CF_BEACON='<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "b5c6156c6e534dadba41b69f80ecd1e0"}\'></script><!-- End Cloudflare Web Analytics -->'
 
 def jsonld(page,lang,inner_html=""):
     b=DOMAIN
@@ -268,6 +269,7 @@ def build(page,lang):
 </div></main>
 {footer_html(lang)}
 {SCRIPT}
+{CF_BEACON}
 </body>
 </html>'''
     return doc
@@ -320,6 +322,7 @@ def page_404(lang):
 <main id="main">{body}</main>
 {footer_html(lang)}
 {SCRIPT}
+{CF_BEACON}
 </body>
 </html>'''
 
