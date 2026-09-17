@@ -4,7 +4,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://api.web3forms.com https://cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
 
 /en/
   X-Frame-Options: SAMEORIGIN
@@ -12,7 +12,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://api.web3forms.com https://cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
 
 /*.html
   X-Frame-Options: SAMEORIGIN
@@ -20,7 +20,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://api.web3forms.com https://cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
 
 /*
   X-Content-Type-Options: nosniff
