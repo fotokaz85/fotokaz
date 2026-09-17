@@ -331,4 +331,6 @@ for d in ("images","admin"):
     if os.path.isdir(sp): shutil.copytree(sp, os.path.join(OUT,d), dirs_exist_ok=True)
 hp=os.path.join(HERE,"_headers")
 if os.path.isfile(hp): shutil.copy(hp, os.path.join(OUT,"_headers"))
+rp=os.path.join(HERE,"_redirects")
+if os.path.isfile(rp): shutil.copy(rp, os.path.join(OUT,"_redirects"))
 print("OK build ->", OUT)
