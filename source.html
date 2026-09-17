@@ -96,6 +96,14 @@ nav .links .nav-drop-menu a::after{display:none}
 .hero-cta a.primary:hover{opacity:.88}
 .hero-cta a.ghost{border:1px solid var(--line);color:var(--ink)}
 .hero-cta a.ghost:hover{border-color:var(--accent);color:var(--accent-soft)}
+@media(max-width:760px){
+  .hero-copy{display:flex;flex-direction:column}
+  .hero-copy .kicker{order:1}
+  .hero-copy h1{order:2}
+  .hero-copy .sub{order:3}
+  .hero-copy .hero-cta{order:4;margin-top:28px}
+  .hero-copy .hero-meta{order:5;margin-top:28px}
+}
 @media(max-width:860px){
   nav .links .nav-drop-menu{position:static;transform:none;border:none;background:none;box-shadow:none;padding:6px 0 0 14px;min-width:0;display:none}
   nav .links .nav-drop.open .nav-drop-menu{display:flex}
@@ -171,6 +179,9 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 
 /* ---------- MASONRY GALLERY (portfolio) ---------- */
 .masonry{column-count:3;column-gap:14px}
+.masonry-more{display:contents}
+.masonry-more[hidden]{display:none}
+.show-more-btn{display:block;margin:36px auto 0;cursor:pointer;background:none}
 .masonry .item{
   break-inside:avoid;margin-bottom:14px;position:relative;overflow:hidden;border-radius:3px;
   background:var(--bg-card);cursor:pointer;display:block;
@@ -248,6 +259,9 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 .faq summary::after{content:'+';font-size:22px;line-height:1;color:var(--accent);transition:transform .25s;flex-shrink:0}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{color:var(--ink-dim);font-size:15px;line-height:1.65;max-width:640px;margin-top:14px}
+.related{margin-top:32px;color:var(--ink-dim);font-size:15px}
+.related a{color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px}
+.related a:hover{color:var(--accent)}
 
 /* ---------- CTA BAND ---------- */
 .cta-band{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);text-align:center}
@@ -370,6 +384,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .af-media{display:flex;gap:14px}
 .af-media img{width:100%;border-radius:8px;display:block;object-fit:cover;border:1px solid var(--line-soft)}
 .af-media.pair img{width:50%}
+.af-media.trio img{width:33.333%}
 .af-kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
 .af-text h3{font-size:27px;color:var(--ink);margin-bottom:14px}
 .af-text p{font-size:16px;line-height:1.7;color:var(--ink-dim)}
@@ -607,11 +622,11 @@ if(cf){ cf.addEventListener('submit',function(e){
 </div>
 </div>
 <div class="afeat rev reveal">
-<div class="af-media pair"><img src="images/wyroznienia/seal-1.webp" alt="IPA 2026 druga nagroda Professional — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/seal-2.webp" alt="IPA 2026 wyróżnienie — Marcin Kaźmieruk" loading="lazy"></div>
+<div class="af-media trio"><img src="images/wyroznienia/seal-3.webp" alt="IPA 2026 pierwsze miejsce, Full Contact, Sports — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/seal-1.webp" alt="IPA 2026 drugie miejsce Professional — Marcin Kaźmieruk" loading="lazy"><img src="images/wyroznienia/seal-2.webp" alt="IPA 2026 wyróżnienie honorowe — Marcin Kaźmieruk" loading="lazy"></div>
 <div class="af-text">
 <div class="af-kicker" data-en="International Photography Awards 2026">International Photography Awards 2026</div>
-<h3 data-en="On the podium, judged worldwide">Na podium, w ocenie całego świata</h3>
-<p data-en="IPA is one of the most prestigious photography competitions in the world, with thousands of entries from dozens of countries. In 2026 I took podium places and honourable mentions in several categories, and received the awards at a gala in the Benaki Museum in Athens. Every verdict like this is confirmation from an international jury that a frame holds up on both craft and story.">IPA to jeden z najbardziej prestiżowych konkursów fotograficznych na świecie, z tysiącami zgłoszeń z kilkudziesięciu krajów. W 2026 zdobyłem miejsca na podium i wyróżnienia w kilku kategoriach, a nagrody odebrałem na gali w Muzeum Benaki w Atenach. Każdy taki werdykt to potwierdzenie od międzynarodowego jury, że kadr broni się i techniką, i historią.</p>
+<h3 data-en="First place, judged by the whole world">Pierwsze miejsce, w ocenie całego świata</h3>
+<p data-en="IPA is one of the most prestigious photography competitions in the world, with thousands of entries from dozens of countries. In 2026 I took first place in Sports (Full Contact), second place in Event, plus two honourable mentions, and received the awards at a gala in the Benaki Museum in Athens. Every verdict like this is confirmation from an international jury that a frame holds up on both craft and story.">IPA to jeden z najbardziej prestiżowych konkursów fotograficznych na świecie, z tysiącami zgłoszeń z kilkudziesięciu krajów. W 2026 zdobyłem pierwsze miejsce w kategorii Sport (Full Contact), drugie miejsce w kategorii Event oraz dwa wyróżnienia honorowe, a nagrody odebrałem na gali w Muzeum Benaki w Atenach. Każdy taki werdykt to potwierdzenie od międzynarodowego jury, że kadr broni się i techniką, i historią.</p>
 </div>
 </div>
 <div class="afeat reveal">
@@ -659,7 +674,7 @@ if(cf){ cf.addEventListener('submit',function(e){
   <div class="wrap">
     <div class="sec-label reveal" data-en="Awards &amp; certificates">Nagrody i certyfikaty</div>
     <h2 class="sec-title reveal" data-en="Recognised around the <span class=&quot;it&quot;>world</span>">Docenione na całym <span class="it">świecie</span></h2>
-    <div class="masonry"><!--GALLERY:wyroznienia--></div>
+    <div class="masonry"><!--GALLERY:wyroznienia--></div><!--GALLERY_MORE:wyroznienia-->
   </div>
 </section>
 <section class="cta-band"><div class="wrap">
@@ -680,7 +695,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Portfolio">Portfolio</div>
 <h2 class="sec-title reveal" data-en='The energy of &lt;span class="it"&gt;the event&lt;/span&gt;'>Energia <span class="it">wydarzenia</span></h2>
 <p class="sec-intro reveal" data-en="Stage, backstage, the faces of the stars and the roar of the crowd. I catch the one moment that cannot be repeated… and carry the energy so you feel like you were there.">Scena, kulisy, twarze gwiazd i szał tłumu. Łapię ten jeden moment, którego nie da się powtórzyć… i oddaję energię tak, żebyście poczuli, że tam byliście.</p>
-<div class="masonry"><!--GALLERY:wydarzenia--></div>
+<div class="masonry"><!--GALLERY:wydarzenia--></div><!--GALLERY_MORE:wydarzenia-->
 </div>
 </section>
 <section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
@@ -712,6 +727,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <details><summary data-en="How is a multi-day or recurring event priced?">Jak wygląda wycena wydarzenia wielodniowego albo cyklicznego?</summary><p data-en="For longer or recurring events we can work out better terms than for a one-off job. Tell me the scale you're thinking of and I'll put together a real proposal.">Przy dłuższych i cyklicznych realizacjach da się dogadać korzystniejsze warunki niż przy jednorazowym zleceniu. Napiszcie, o jakiej skali mówimy, a przedstawię konkretną propozycję.</p></details>
 <details><summary data-en="Do you travel abroad too?">Jeździsz też za granicę?</summary><p data-en="Yes, I've already worked abroad with a camera, from Ostrava to Athens. Travel and accommodation are billed separately and clearly, never hidden in the rate.">Tak, byłem już z aparatem w kilku krajach, od Ostrawy po Ateny. Koszty dojazdu i noclegu liczę osobno, jasno, bez ukrywania ich w stawce.</p></details>
 </div>
+<p class="related reveal" data-en='See also: &lt;a href="teatr.html"&gt;Theatre&lt;/a&gt; for stage photography, and &lt;a href="sluby.html"&gt;Weddings&lt;/a&gt; if you're planning a private celebration.'>Zobacz też: <a href="teatr.html">Teatr</a>, jeśli chodzi o scenę, oraz <a href="sluby.html">Śluby</a>, jeśli planujecie prywatną uroczystość.</p>
 </div>
 </section>
 <section class="cta-band">
@@ -734,7 +750,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Portfolio">Portfolio</div>
 <h2 class="sec-title reveal" data-en='Selected &lt;span class="it"&gt;frames&lt;/span&gt;'>Wybrane <span class="it">kadry</span></h2>
 <p class="sec-intro reveal" data-en="Your day told your way, from the first nerves at the makeup chair to the last dance. I do not stage little scenes, I wait for what happens on its own… so that years later you relive that day again, looking at the photos.">Wasz dzień opowiedziany po swojemu, od pierwszych nerwów przy makijażu po ostatni taniec. Nie ustawiam scenek, czekam na to, co dzieje się samo… żebyście za lata przeżyli ten dzień jeszcze raz, patrząc na zdjęcia.</p>
-<div class="masonry"><!--GALLERY:sluby--></div>
+<div class="masonry"><!--GALLERY:sluby--></div><!--GALLERY_MORE:sluby-->
 </div>
 </section>
 <section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)"><div class="wrap about-grid">
@@ -787,6 +803,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <details><summary data-en="Can this be personalised for us?">Da się to jakoś spersonalizować pod nas?</summary><p data-en="That's basically the whole point of how I work. I don't have a fixed shot list I repeat at every wedding. The more you tell me about yourselves before the day, the more of you ends up in the photos.">To w zasadzie podstawa mojej pracy. Nie mam gotowego schematu ujęć, który odtwarzam na każdym ślubie. Im więcej mi o sobie powiecie na spotkaniu, tym więcej z Was będzie na zdjęciach.</p></details>
 <details><summary data-en="How do we get started?">Jak zacząć, żeby się umówić?</summary><p data-en="Send me a few lines about yourselves and the day you're planning, and I'll reply with specifics: availability on your date, a quote, and what a day with me usually looks like. We sort out the rest at a meeting.">Napiszcie kilka słów o sobie i o dniu, który planujecie, a ja odpiszę z konkretami: dostępnością w Waszym terminie, wyceną i tym, jak zwykle wygląda taki dzień ze mną. Resztę ustalamy na spotkaniu.</p></details>
 </div>
+<p class="related reveal" data-en='See also: &lt;a href="hotele.html"&gt;Hotels &amp; interiors&lt;/a&gt; for venue inspiration, and &lt;a href="wydarzenia.html"&gt;Events &amp; stage&lt;/a&gt; for the party itself.'>Zobacz też: <a href="hotele.html">Hotele i wnętrza</a>, jeśli szukacie inspiracji na miejsce, oraz <a href="wydarzenia.html">Wydarzenia i scenę</a>, jeśli myślicie o oprawie samej imprezy.</p>
 </div>
 </section>
 <section class="cta-band">
@@ -809,7 +826,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Portfolio">Portfolio</div>
 <h2 class="sec-title reveal" data-en='Flavour on &lt;span class="it"&gt;the plate&lt;/span&gt;'>Smak na <span class="it">talerzu</span></h2>
 <p class="sec-intro reveal" data-en="A photo that sells the dish before the guest even opens the menu. I set the light, wait for the moment and catch the texture, the steam, the dripping sauce… so your mouth waters. Every dish has its own character and I build the frame around it, not around a template.">Zdjęcie, które sprzedaje danie, zanim gość spojrzy w menu. Ustawiam światło, czekam na ten moment i łapię teksturę, parę, ociekający sos… tak, żeby ślinka ciekła. Każde danie ma swój charakter i pod to buduję kadr, nie pod cudzy szablon.</p>
-<div class="masonry"><!--GALLERY:kulinarna--></div>
+<div class="masonry"><!--GALLERY:kulinarna--></div><!--GALLERY_MORE:kulinarna-->
 </div>
 </section>
 <section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
@@ -842,6 +859,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <details><summary data-en="How much does it cost?">Ile to kosztuje?</summary><p data-en="It depends on the number of dishes, the location, and whether you need just product shots or also the mood of the place and the people at work. Tell me what you have in mind and I'll reply with a real quote.">To zależy od liczby dań, lokalizacji i tego, czy potrzebujecie tylko zdjęć produktowych, czy też klimatu lokalu i ludzi przy pracy. Napiszcie, co macie na myśli, odpiszę z konkretną wyceną.</p></details>
 <details><summary data-en="Can you also shoot the interior while you're there?">Czy przy okazji możesz sfotografować też wnętrze lokalu?</summary><p data-en="Sure, I often combine it with the food session in one visit, it works out cheaper and smoother than two separate dates. Just mention it when we're working out the quote.">Jasne, często to łączę z sesją kulinarną w ramach jednego wyjazdu, wychodzi taniej i sprawniej niż dwa osobne terminy. Wystarczy, że o tym wspomnicie na etapie wyceny.</p></details>
 </div>
+<p class="related reveal" data-en='See also: &lt;a href="biznes.html"&gt;Business &amp; portrait&lt;/a&gt; for a brand portrait of the chef, and &lt;a href="hotele.html"&gt;Hotels &amp; interiors&lt;/a&gt; for the restaurant space itself.'>Zobacz też: <a href="biznes.html">Biznes i portret</a>, jeśli chcecie portret wizerunkowy szefa kuchni, oraz <a href="hotele.html">Hotele i wnętrza</a>, jeśli zależy Wam też na samym lokalu.</p>
 </div>
 </section>
 <section class="cta-band">
@@ -864,7 +882,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Portfolio">Portfolio</div>
 <h2 class="sec-title reveal" data-en='Stage &lt;span class="it"&gt;light&lt;/span&gt;'>Światło <span class="it">sceny</span></h2>
 <p class="sec-intro reveal" data-en="What happens between rehearsal and opening night, what the audience never sees. I photograph theatre the way I feel it… light, gesture, the tension right before the actor stops acting and starts being.">To, co dzieje się między próbą a premierą, czego widz nigdy nie zobaczy. Fotografuję teatr tak, jak go czuję… światło, gest, napięcie tuż przed tym, aż aktor przestaje grać, a zaczyna być.</p>
-<div class="masonry"><!--GALLERY:teatr--></div>
+<div class="masonry"><!--GALLERY:teatr--></div><!--GALLERY_MORE:teatr-->
 </div>
 </section>
 <section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
@@ -897,6 +915,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <details><summary data-en="How does the licence work, posters, media, the theatre's social media?">Jak wygląda licencja na wykorzystanie zdjęć, plakaty, media, social media teatru?</summary><p data-en="We settle that as part of the collaboration, using a photo on a poster and a billboard is different from one social media post. Just tell me where the photos will appear.">Ustalamy to przy współpracy, bo inaczej wygląda użycie na plakacie i billboardzie, a inaczej jeden post w social media. Powiedzcie, gdzie zdjęcia mają się pojawić.</p></details>
 <details><summary data-en="Is a long-term collaboration as resident photographer possible?">Czy możliwa jest stała współpraca jako fotograf rezydent?</summary><p data-en="Yes, that's how I've worked with the Norwid Theatre for several years now, season after season. If you're looking for someone long-term, get in touch and we'll talk terms.">Tak, tak pracuję na przykład z Teatrem im. Norwida od kilku lat, sezon po sezonie. Jeśli szukacie kogoś na stałe, napiszcie, a porozmawiamy o warunkach takiej współpracy.</p></details>
 </div>
+<p class="related reveal" data-en='See also: &lt;a href="wydarzenia.html"&gt;Events &amp; stage&lt;/a&gt; for festivals and galas, and &lt;a href="biznes.html"&gt;Business &amp; portrait&lt;/a&gt; for actor and director portraits.'>Zobacz też: <a href="wydarzenia.html">Wydarzenia i scenę</a>, jeśli chodzi o festiwale i gale, oraz <a href="biznes.html">Biznes i portret</a>, jeśli potrzebujecie portretów aktorów czy reżysera.</p>
 </div>
 </section>
 <section class="cta-band">
@@ -919,7 +938,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Portfolio">Portfolio</div>
 <h2 class="sec-title reveal" data-en='The brand in &lt;span class="it"&gt;the frame&lt;/span&gt;'>Marka w <span class="it">kadrze</span></h2>
 <p class="sec-intro reveal" data-en="Interiors, portraits and brands shown the way you want to be remembered. Every place has its own soul, and my job is to catch it and make it build trust from the first glance.">Wnętrza, portrety i marki pokazane tak, jak chcecie być zapamiętani. Każde miejsce ma swoją duszę, moją robotą jest ją wyłapać i sprawić, żeby budowała zaufanie od pierwszego spojrzenia.</p>
-<div class="masonry"><!--GALLERY:biznes--></div>
+<div class="masonry"><!--GALLERY:biznes--></div><!--GALLERY_MORE:biznes-->
 </div>
 </section>
 <section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
@@ -951,6 +970,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <details><summary data-en="How is a business session priced?">Jak wygląda wycena sesji biznesowej?</summary><p data-en="It depends on scope: number of people, location, number of days. I'd rather hear what you have in mind than guess a range, a single portrait session and a campaign for a hotel chain are entirely different budgets.">Zależy od zakresu: liczby osób, lokalizacji, liczby dni. Wolę usłyszeć, co macie na myśli, niż strzelać widełkami, bo sesja portretowa dla jednej osoby i kampania dla sieci hoteli to zupełnie inne budżety.</p></details>
 <details><summary data-en="How long until we get the finished material?">Ile czekamy na gotowy materiał?</summary><p data-en="We set the deadline together at the start, especially if the photos are going into a specific campaign or publication on a set date. You'll know exactly when to expect them.">Termin ustalamy na starcie razem z Wami, zwłaszcza jeśli zdjęcia mają wejść do konkretnej kampanii czy publikacji w określonym czasie. Wiecie dokładnie, na kiedy je macie.</p></details>
 </div>
+<p class="related reveal" data-en='See also: &lt;a href="kulinarna.html"&gt;Food photography&lt;/a&gt; for your menu, and &lt;a href="hotele.html"&gt;Hotels &amp; interiors&lt;/a&gt; for your space.'>Zobacz też: <a href="kulinarna.html">Fotografię kulinarną</a>, jeśli potrzebujecie też zdjęć menu, oraz <a href="hotele.html">Hotele i wnętrza</a>, jeśli zależy Wam na przestrzeni.</p>
 </div>
 </section>
 <section class="cta-band">
@@ -973,7 +993,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="sec-label reveal" data-en="Portfolio">Portfolio</div>
 <h2 class="sec-title reveal" data-en='The place in &lt;span class="it"&gt;the frame&lt;/span&gt;'>Miejsce w <span class="it">kadrze</span></h2>
 <p class="sec-intro reveal" data-en="A hotel is a promise and the interior keeps it. I photograph spaces so that light, texture and atmosphere sell the stay before the guest even walks in.">Hotel to obietnica, a wnętrze ją składa. Fotografuję przestrzenie tak, żeby światło, faktura i klimat sprzedawały pobyt, zanim gość przekroczy próg.</p>
-<div class="masonry"><!--GALLERY:hotele--></div>
+<div class="masonry"><!--GALLERY:hotele--></div><!--GALLERY_MORE:hotele-->
 </div>
 </section>
 <section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
@@ -989,6 +1009,7 @@ if(cf){ cf.addEventListener('submit',function(e){
 <details><summary data-en="How is a property with many rooms or halls priced?">Jak wygląda wycena dla obiektu z wieloma pokojami czy salami?</summary><p data-en="I price it by scope, not a fixed per-room rate, a suite with a view and a standard room aren't the same job. Tell me how much space you want covered and you'll get a real quote.">Liczę to według zakresu, nie według sztywnej stawki za pokój, bo apartament z widokiem i pokój standardowy to co innego. Napiszcie, ile przestrzeni chcecie objąć, dostaniecie realną wycenę.</p></details>
 <details><summary data-en="How long until we get the finished material?">Ile czekamy na gotowy materiał?</summary><p data-en="We agree on a deadline together at the start, especially if the photos need to go live on your website or booking system by a specific date.">Termin ustalamy razem na starcie, szczególnie jeśli zdjęcia mają wejść na stronę czy do systemu rezerwacji na konkretną datę.</p></details>
 </div>
+<p class="related reveal" data-en='See also: &lt;a href="kulinarna.html"&gt;Food photography&lt;/a&gt; for your restaurant menu, and &lt;a href="sluby.html"&gt;Weddings&lt;/a&gt; if you host them too.'>Zobacz też: <a href="kulinarna.html">Fotografię kulinarną</a>, jeśli macie restaurację, oraz <a href="sluby.html">Śluby</a>, jeśli organizujecie też wesela.</p>
 </div>
 </section>
 <section class="cta-band">

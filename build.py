@@ -2,6 +2,24 @@
 """Generator strony sterowany treścią. Netlify uruchamia go po każdej zmianie w panelu."""
 import os, re, yaml, json, shutil
 from bs4 import BeautifulSoup
+try:
+    from PIL import Image
+except Exception:
+    Image=None
+
+_DIMS_CACHE={}
+def img_dims(relpath):
+    """Zwraca (width,height) prawdziwego pliku w images/, albo None jeśli nieznane."""
+    if Image is None: return None
+    if relpath in _DIMS_CACHE: return _DIMS_CACHE[relpath]
+    p=os.path.join(HERE, relpath.lstrip('/'))
+    try:
+        with Image.open(p) as im:
+            dims=im.size
+    except Exception:
+        dims=None
+    _DIMS_CACHE[relpath]=dims
+    return dims
 
 HERE=os.path.dirname(os.path.abspath(__file__))
 DOMAIN="https://fotokaz.pl"
@@ -114,12 +132,32 @@ def apply_content(html, lang):
             html=html.replace(anchor, val)
     return html
 
+GALLERY_LIMIT=24
+def _gal_item(base,i,src,lang,eager_src=True):
+    dims=img_dims(src)
+    dim_attr=f' width="{dims[0]}" height="{dims[1]}"' if dims else ''
+    alt=f'{esc(base)} {i} — Marcin Kaźmieruk'
+    if eager_src:
+        return f'\n      <a class="item"><img src="{src}" alt="{alt}" loading="lazy"{dim_attr}></a>'
+    return f'\n      <a class="item"><img data-src="{src}" alt="{alt}"{dim_attr}></a>'
+
 def render_gallery(cat):
     base=GAL_ALT.get(cat,cat); items=""
-    for i,src in enumerate(galleries.get(cat,[]) or [],1):
-        src=src.lstrip('/')
-        items+=f'\n      <a class="item"><img src="{src}" alt="{esc(base)} {i} — Marcin Kaźmieruk" loading="lazy"></a>'
+    all_src=[s.lstrip('/') for s in (galleries.get(cat,[]) or [])]
+    head=all_src[:GALLERY_LIMIT]; rest=all_src[GALLERY_LIMIT:]
+    for i,src in enumerate(head,1):
+        items+=_gal_item(base,i,src,"pl")
+    if rest:
+        more_items="".join(_gal_item(base,i,src,"pl",eager_src=False) for i,src in enumerate(rest,len(head)+1))
+        items+=f'\n      <div class="masonry-more" hidden>{more_items}\n      </div>'
     return items
+
+def render_gallery_more_btn(cat):
+    all_src=galleries.get(cat,[]) or []
+    if len(all_src)<=GALLERY_LIMIT: return ""
+    n=len(all_src)-GALLERY_LIMIT
+    return (f'\n<button type="button" class="btn show-more-btn" data-en="Show {n} more photos">'
+            f'Zobacz jeszcze {n} zdjęć</button>')
 
 def nav_html(cur,lang):
     logo='<a href="index.html" class="logo" aria-label="Marcin Kaźmieruk Fotografia — strona główna">foto<span>kaz</span></a>'
@@ -185,6 +223,7 @@ def build(page,lang):
         inner=inner.replace(tok, val)
     for cat in GAL_ALT:                          # wstaw galerie z galleries.yml
         inner=inner.replace(f'<!--GALLERY:{cat}-->', render_gallery(cat))
+        inner=inner.replace(f'<!--GALLERY_MORE:{cat}-->', render_gallery_more_btn(cat))
     if lang=="en":
         inner=re.sub(r'(src|href)="images/', r'\1="../images/', inner)
         cssref=f"../style.css?v={CSS_VER}"; canon=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}"); loc="en_GB"; hl="en"
@@ -240,9 +279,10 @@ for page in pages_cfg:
     open(os.path.join(OUT,"en",page),"w",encoding="utf-8").write(build(page,"en"))
 urls=[]
 for page in pages_cfg:
+    if pages_cfg[page].get("noindex"): continue   # np. prywatnosc.html, zablokowana w robots.txt
     for pref in ("","en/"):
         loc=(f"{DOMAIN}/{pref}" if page=="index.html" else f"{DOMAIN}/{pref}{page}")
-        pr="1.0" if page=="index.html" else ("0.5" if pages_cfg[page].get("noindex") else "0.8")
+        pr="1.0" if page=="index.html" else "0.8"
         urls.append(f"  <url><loc>{loc}</loc><changefreq>monthly</changefreq><priority>{pr}</priority></url>")
 open(os.path.join(OUT,"sitemap.xml"),"w",encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"\n".join(urls)+"\n</urlset>\n")
 open(os.path.join(OUT,"robots.txt"),"w",encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /prywatnosc.html\nDisallow: /en/prywatnosc.html\nDisallow: /admin/\n\nSitemap: {DOMAIN}/sitemap.xml\n")
