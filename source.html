@@ -186,7 +186,7 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
   break-inside:avoid;margin-bottom:14px;position:relative;overflow:hidden;border-radius:3px;
   background:var(--bg-card);cursor:pointer;display:block;
 }
-.masonry .item img{width:100%;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s}
+.masonry .item img{width:100%;height:auto;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s}
 .masonry .item:hover img{transform:scale(1.05)}
 .masonry .item::after{
   content:"";position:absolute;inset:0;
@@ -382,7 +382,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .afeat{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
 .afeat.rev .af-media{order:2}
 .af-media{display:flex;gap:14px}
-.af-media img{width:100%;border-radius:8px;display:block;object-fit:cover;border:1px solid var(--line-soft)}
+.af-media img{width:100%;height:auto;border-radius:8px;display:block;object-fit:cover;border:1px solid var(--line-soft)}
 .af-media.pair img{width:50%}
 .af-media.trio img{width:33.333%}
 .af-kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
@@ -677,6 +677,13 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="press-row"><div class="outlet">Magazyn Wesele</div><div class="desc" data-en="A shoot at Czocha Castle (the 20th anniversary issue).">Realizacja na Zamku Czocha (numer 20-lecia).</div></div>
 </div>
 </div>
+</section>
+<section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="sec-label reveal" data-en="Awards &amp; certificates">Nagrody i certyfikaty</div>
+    <h2 class="sec-title reveal" data-en="Recognised around the <span class=&quot;it&quot;>world</span>">Docenione na całym <span class="it">świecie</span></h2>
+    <div class="masonry"><!--GALLERY:wyroznienia--></div><!--GALLERY_MORE:wyroznienia-->
+  </div>
 </section>
 <section class="cta-band"><div class="wrap">
 <h2 class="reveal" data-en='Want me on &lt;span class="it"&gt;your project?&lt;/span&gt;'>Chcesz mnie do <span class="it">swojego projektu?</span></h2>
