@@ -155,12 +155,22 @@ def footer_html(lang):
 
 SCRIPT=open(os.path.join(HERE,"_script.html"),encoding="utf-8").read()
 
-def jsonld(page,lang):
+def jsonld(page,lang,inner_html=""):
     b=DOMAIN
     biz='{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia","image":"%s/images/sluby/12.webp","@id":"%s/#business","url":"%s/","telephone":"+48505183969","email":"info@fotokaz.pl","address":{"@type":"PostalAddress","streetAddress":"ul. Podgórze 1A/1","addressLocality":"Jelenia Góra","postalCode":"58-500","addressRegion":"Dolny Śląsk","addressCountry":"PL"},"areaServed":["PL","Europe"],"priceRange":"$$$","sameAs":["https://www.facebook.com/marcin4funphotos","https://www.instagram.com/marcin4funphotos","https://www.instagram.com/fotofoodie"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"133","bestRating":"5"},"founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","award":["#1 Foodelia 2025","IPA 2026","Flash Masters Top 10","Two Mann Studios Scholarship","Osobowość Roku 2025 Jelenia Góra"]},"knowsAbout":["fotografia kulinarna","fotografia komercyjna","fotografia eventowa","fotografia ślubna","fotografia teatralna"]}'%(b,b,b)
     out=[biz]
     if page=="o-mnie.html":
         out.append('{"@context":"https://schema.org","@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","url":"%s/o-mnie.html","knowsLanguage":["pl","en"]}'%b)
+    if inner_html and "faq" in inner_html:
+        fsoup=BeautifulSoup(inner_html,"html.parser")
+        qas=[]
+        for det in fsoup.select(".faq details"):
+            summ=det.find("summary"); p=det.find("p")
+            if summ and p:
+                q=summ.get_text(strip=True); a=p.get_text(strip=True)
+                qas.append('{"@type":"Question","name":%s,"acceptedAnswer":{"@type":"Answer","text":%s}}'%(json.dumps(q,ensure_ascii=False),json.dumps(a,ensure_ascii=False)))
+        if qas:
+            out.append('{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[%s]}'%",".join(qas))
     return "\n".join('<script type="application/ld+json">%s</script>'%o for o in out)
 
 def build(page,lang):
@@ -209,7 +219,7 @@ def build(page,lang):
 {FONTS_LINK}
 <link rel="stylesheet" href="{cssref}">
 {THEME_STYLE}
-{jsonld(page,lang)}
+{jsonld(page,lang,inner)}
 </head>
 <body>
 <a href="#main" class="skip-link">{'Skip to content' if lang=='en' else 'Przejdź do treści'}</a>

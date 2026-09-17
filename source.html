@@ -239,6 +239,16 @@ header.hero .sub{margin-top:34px;max-width:540px;font-size:clamp(16px,2vw,19px);
 .crow a.v{text-decoration:none;transition:color .25s}
 .crow a.v:hover{color:var(--accent-soft)}
 
+/* ---------- FAQ ---------- */
+.faq{max-width:760px}
+.faq details{border-bottom:1px solid var(--line-soft);padding:22px 0}
+.faq details:first-of-type{border-top:1px solid var(--line-soft)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--font-head);font-size:18px;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:22px;line-height:1;color:var(--accent);transition:transform .25s;flex-shrink:0}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--ink-dim);font-size:15px;line-height:1.65;max-width:640px;margin-top:14px}
+
 /* ---------- CTA BAND ---------- */
 .cta-band{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);text-align:center}
 .cta-band h2{font-size:clamp(28px,4vw,44px);margin-bottom:18px}
@@ -689,6 +699,21 @@ if(cf){ cf.addEventListener('submit',function(e){
 </div>
 </div>
 </section>
+<section>
+<div class="wrap">
+<div class="sec-label reveal" data-en="FAQ">Najczęstsze pytania</div>
+<h2 class="sec-title reveal" data-en='Before we &lt;span class="it"&gt;work out the details&lt;/span&gt;'>Zanim <span class="it">ustalimy szczegóły</span></h2>
+<p class="sec-intro reveal" data-en="Every event has its own dynamic, so these answers are a general picture. Tell me what you're organising and I'll tell you how we'll handle it.">Każdy event ma swoją dynamikę, więc poniższe odpowiedzi to ogólny obraz. Napiszcie, co organizujecie, a odpowiem, jak to ogarniemy.</p>
+<div class="faq reveal">
+<details><summary data-en="What does covering a festival or concert with you actually look like?">Jak wygląda fotografowanie festiwalu czy koncertu z Tobą?</summary><p data-en="I'm wherever something's happening, on stage, backstage, in the crowd. I know the rhythm of these events from years at Beats for Love and the Opole festival, so I catch moments as they happen, not after.">Jestem wszędzie tam, gdzie coś się dzieje, na scenie, za kulisami, w tłumie. Znam rytm takich wydarzeń z wielu lat pracy przy Beats for Love czy Opolu, więc łapię momenty, zanim się skończą, nie po fakcie.</p></details>
+<details><summary data-en="Do you need accreditation or backstage access?">Potrzebujesz akredytacji albo dostępu do stref backstage?</summary><p data-en="If the event requires it, yes. Just tell me in advance what access the organiser can provide, and I'll fit in like any other crew member.">Jeśli event tego wymaga, tak. Powiedzcie mi wcześniej, jaki dostęp organizator może zapewnić, i dopasuję się do tego jak każdy inny członek ekipy.</p></details>
+<details><summary data-en="How fast do we get the photos after the event?">Jak szybko po wydarzeniu dostajemy zdjęcia?</summary><p data-en="I know speed matters at events, especially for social media the next day. We set the selection and delivery timeline together before the event, so nobody's left waiting.">Wiem, że przy eventach liczy się tempo, zwłaszcza pod social media następnego dnia. Termin selekcji i dostawy ustalamy razem przed wydarzeniem, żeby nikt nie czekał w niepewności.</p></details>
+<details><summary data-en="Do you shoot video or short reels too?">Fotografujesz też wideo albo krótkie rolki?</summary><p data-en="I mainly work as a photographer, but for some jobs I add video, from a drone or handheld. Tell me exactly what you need and I'll tell you what's possible.">Głównie pracuję jako fotograf, ale przy niektórych realizacjach dokładam materiał wideo, np. z drona czy z ręki. Powiedzcie, czego dokładnie potrzebujecie, a powiem, co da się zrobić.</p></details>
+<details><summary data-en="How is a multi-day or recurring event priced?">Jak wygląda wycena wydarzenia wielodniowego albo cyklicznego?</summary><p data-en="For longer or recurring events we can work out better terms than for a one-off job. Tell me the scale you're thinking of and I'll put together a real proposal.">Przy dłuższych i cyklicznych realizacjach da się dogadać korzystniejsze warunki niż przy jednorazowym zleceniu. Napiszcie, o jakiej skali mówimy, a przedstawię konkretną propozycję.</p></details>
+<details><summary data-en="Do you travel abroad too?">Jeździsz też za granicę?</summary><p data-en="Yes, I've already worked abroad with a camera, from Ostrava to Athens. Travel and accommodation are billed separately and clearly, never hidden in the rate.">Tak, byłem już z aparatem w kilku krajach, od Ostrawy po Ateny. Koszty dojazdu i noclegu liczę osobno, jasno, bez ukrywania ich w stawce.</p></details>
+</div>
+</div>
+</section>
 <section class="cta-band">
 <div class="wrap">
 <h2 class="reveal" data-en="Let's create &lt;span class=&quot;it&quot;&gt;something together&lt;/span&gt;">Zróbmy coś <span class="it">razem</span></h2>
@@ -748,6 +773,22 @@ if(cf){ cf.addEventListener('submit',function(e){
 <p class="sec-intro reveal" data-en="Weddings in Poland and abroad: Wojanów Palace, Czocha Castle, Karpniki, Dwór Korona Karkonoszy, plus intercontinental weddings (Poland to Australia), Prague and Greece." style="margin-top:48px">Realizacje w kraju i za granicą: Pałac Wojanów, Zamek Czocha, Karpniki, Dwór Korona Karkonoszy oraz śluby międzykontynentalne (Polska–Australia), Praga, Grecja.</p>
 </div>
 </section>
+<section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+<div class="wrap">
+<div class="sec-label reveal" data-en="FAQ">Najczęstsze pytania</div>
+<h2 class="sec-title reveal" data-en='Before you &lt;span class="it"&gt;decide&lt;/span&gt;'>Zanim się <span class="it">zdecydujecie</span></h2>
+<p class="sec-intro reveal" data-en="Every couple and every wedding is different, so treat this as a starting point, not a rulebook. It's best to just talk, tell me about your day and I'll reply with specifics.">Każda para i każdy ślub są inne, więc traktujcie to jako punkt wyjścia, nie sztywną instrukcję. Najlepiej porozmawiać wprost, opowiedzcie mi o swoim dniu, a odpiszę z konkretami.</p>
+<div class="faq reveal">
+<details><summary data-en="How much does wedding photography with you cost?">Ile kosztuje fotografia ślubna u Ciebie?</summary><p data-en="Depends on the date, location and how many hours you actually need… I don't have one fixed price list, a wedding at Wojanów Palace and a small civil ceremony are two different stories. Tell me your plans and you'll get a real quote, not internet guesswork.">Zależy od terminu, lokalizacji i tego, ile godzin naprawdę potrzebujecie… nie mam jednego sztywnego cennika, bo wesele w Pałacu Wojanów i kameralny ślub cywilny to dwie różne historie. Napiszcie, co planujecie, a dostaniecie konkretną wycenę, nie widełki z internetu.</p></details>
+<details><summary data-en="What exactly is included in the package?">Co dokładnie obejmuje pakiet?</summary><p data-en="I'm with you from getting ready to the last dance, one full day, no clock watching, no photo limit. I don't sell hours in pieces, because the moments that matter rarely stick to a schedule.">Jestem z Wami od przygotowań aż po ostatni taniec, jeden pełny dzień bez patrzenia na zegarek i bez limitu zdjęć. Nie sprzedaję godzin w kawałkach, bo najważniejsze momenty rzadko trzymają się grafiku.</p></details>
+<details><summary data-en="How many photos will we get at the end?">Ile zdjęć dostaniemy na koniec?</summary><p data-en="Usually between 400 and 1000, depending on the wedding itself. I'd rather give you a few hundred frames worth stopping at than a few thousand average ones.">Zwykle od 400 do 1000, zależnie od charakteru wesela. Wolę dać Wam kilkaset kadrów, przy których zatrzymacie wzrok, niż kilka tysięcy takich sobie.</p></details>
+<details><summary data-en="And if the weather turns bad?">A jeśli pogoda się zepsuje?</summary><p data-en="That's usually when it gets interesting. Rain, snow, a storm… I keep shooting and capture what's really happening. I'm 192 cm tall, so I've walked through plenty of snow already. If the shoot has to move indoors, we'll figure it out on the spot.">To wtedy robi się najciekawiej. Deszcz, śnieg, burza… zostaję z aparatem i łapię to, co naprawdę się dzieje. Mam 192 cm wzrostu, więc niejeden śnieg już przeszedłem. Jeśli plener trzeba przenieść do wnętrza, ogarniemy to na miejscu.</p></details>
+<details><summary data-en="Do you work alone?">Czy pracujesz sam?</summary><p data-en="Usually not. I usually bring someone for lighting, to capture you in a way one pair of hands can't manage, and to be in two places at once if needed.">Zwykle nie. Zwykle mam przy sobie kogoś do światła, żeby uchwycić Was w sposób, którego nie da się zrobić jedną parą rąk, i żeby w razie potrzeby być w dwóch miejscach naraz.</p></details>
+<details><summary data-en="Can this be personalised for us?">Da się to jakoś spersonalizować pod nas?</summary><p data-en="That's basically the whole point of how I work. I don't have a fixed shot list I repeat at every wedding. The more you tell me about yourselves before the day, the more of you ends up in the photos.">To w zasadzie podstawa mojej pracy. Nie mam gotowego schematu ujęć, który odtwarzam na każdym ślubie. Im więcej mi o sobie powiecie na spotkaniu, tym więcej z Was będzie na zdjęciach.</p></details>
+<details><summary data-en="How do we get started?">Jak zacząć, żeby się umówić?</summary><p data-en="Send me a few lines about yourselves and the day you're planning, and I'll reply with specifics: availability on your date, a quote, and what a day with me usually looks like. We sort out the rest at a meeting.">Napiszcie kilka słów o sobie i o dniu, który planujecie, a ja odpiszę z konkretami: dostępnością w Waszym terminie, wyceną i tym, jak zwykle wygląda taki dzień ze mną. Resztę ustalamy na spotkaniu.</p></details>
+</div>
+</div>
+</section>
 <section class="cta-band">
 <div class="wrap">
 <h2 class="reveal" data-en="Let's create &lt;span class=&quot;it&quot;&gt;something together&lt;/span&gt;">Zróbmy coś <span class="it">razem</span></h2>
@@ -786,6 +827,21 @@ if(cf){ cf.addEventListener('submit',function(e){
 <div class="cell"><h4 data-en="Chefs">Szefowie kuchni</h4><p data-en="Karol Okrasa, Adam Chrząstowski, Ernest Jagodziński and many more.">Karol Okrasa, Adam Chrząstowski, Ernest Jagodziński i wielu innych.</p></div>
 </div>
 <p class="sec-intro reveal" data-en="Shoots for restaurants, hotels and brands, in Poland and abroad (the Netherlands, Greece). Food photography workshops with Nikon." style="margin-top:48px">Sesje dla restauracji, hoteli i marek, w kraju i za granicą (Holandia, Grecja). Warsztaty fotografii kulinarnej z Nikonem.</p>
+</div>
+</section>
+<section>
+<div class="wrap">
+<div class="sec-label reveal" data-en="FAQ">Najczęstsze pytania</div>
+<h2 class="sec-title reveal" data-en='Before you &lt;span class="it"&gt;book a session&lt;/span&gt;'>Zanim <span class="it">zamówicie sesję</span></h2>
+<p class="sec-intro reveal" data-en="Every kitchen and every menu is different, so treat this as a starting point. Tell me what you're planning and we'll sort out the rest directly.">Każda kuchnia i każde menu są inne, więc poniższe odpowiedzi to punkt wyjścia. Napiszcie, co planujecie, a dogadamy resztę wprost.</p>
+<div class="faq reveal">
+<details><summary data-en="How long does a food photography session take?">Jak długo trwa sesja kulinarna?</summary><p data-en="Depends on the number of dishes and whether we shoot the interior too. I usually count it in hours, not full days, so you pay for real work, not my travel time.">Zależy od liczby dań i tego, czy fotografujemy też wnętrze lokalu. Zwykle liczę to w godzinach, nie w dniówkach, żebyście płacili za realną pracę, nie za mój czas w drodze.</p></details>
+<details><summary data-en="How many dishes can I fit into one session?">Ile dań mogę sfotografować w jednej sesji?</summary><p data-en="I don't set a hard limit, because one dish with sauce, steam and texture can take longer than five simple ones. We work it out together when quoting, based on the menu you show me.">Nie ustawiam sztywnego limitu, bo jedno danie z sosem, parą i teksturą potrafi zająć więcej czasu niż pięć prostych. Ustalamy to razem przy wycenie, na podstawie menu, które mi pokażecie.</p></details>
+<details><summary data-en="Do you bring your own gear and props?">Przyjeżdżasz ze swoim sprzętem i rekwizytami?</summary><p data-en="Yes, I bring my own light, backgrounds and small props. If you have your own tableware or signature plates, even better, it builds consistency with your brand.">Tak, światło, tła i drobne rekwizyty biorę ze sobą. Jeśli macie swoją zastawę czy charakterystyczne talerze, tym lepiej, bo to buduje spójność z Waszą marką.</p></details>
+<details><summary data-en="Are the photos good for a menu and ads, or just social media?">Zdjęcia nadają się do menu i reklamy, czy tylko do social media?</summary><p data-en="I shoot in a quality that holds up in print, on a billboard or a menu cover, not just on a phone screen. Just tell me in advance what they're for, and I'll frame accordingly.">Fotografuję od razu w jakości, która wytrzyma druk, billboard czy okładkę menu, nie tylko ekran telefonu. Powiedzcie mi wcześniej, do czego dokładnie mają posłużyć, to dobiorę kadrowanie pod to.</p></details>
+<details><summary data-en="How much does it cost?">Ile to kosztuje?</summary><p data-en="It depends on the number of dishes, the location, and whether you need just product shots or also the mood of the place and the people at work. Tell me what you have in mind and I'll reply with a real quote.">To zależy od liczby dań, lokalizacji i tego, czy potrzebujecie tylko zdjęć produktowych, czy też klimatu lokalu i ludzi przy pracy. Napiszcie, co macie na myśli, odpiszę z konkretną wyceną.</p></details>
+<details><summary data-en="Can you also shoot the interior while you're there?">Czy przy okazji możesz sfotografować też wnętrze lokalu?</summary><p data-en="Sure, I often combine it with the food session in one visit, it works out cheaper and smoother than two separate dates. Just mention it when we're working out the quote.">Jasne, często to łączę z sesją kulinarną w ramach jednego wyjazdu, wychodzi taniej i sprawniej niż dwa osobne terminy. Wystarczy, że o tym wspomnicie na etapie wyceny.</p></details>
+</div>
 </div>
 </section>
 <section class="cta-band">
@@ -828,6 +884,21 @@ if(cf){ cf.addEventListener('submit',function(e){
 <p class="sec-intro reveal" data-en="A photo from 'The Catering Queen' chosen as 'Photo of the Day' by e-teatr.pl / Teatr w Polsce." style="margin-top:48px">Zdjęcie z „Królowej Cateringu" wybrane jako „Zdjęcie Dnia" przez e-teatr.pl / Teatr w Polsce.</p>
 </div>
 </section>
+<section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+<div class="wrap">
+<div class="sec-label reveal" data-en="FAQ">Najczęstsze pytania</div>
+<h2 class="sec-title reveal" data-en='Before you &lt;span class="it"&gt;invite me to a rehearsal&lt;/span&gt;'>Zanim <span class="it">zaprosicie mnie na próbę</span></h2>
+<p class="sec-intro reveal" data-en="Every production and every ensemble works differently, so these answers are a general picture. Tell me what performance or collaboration you have in mind and I'll answer with specifics.">Każdy spektakl i każdy zespół pracują inaczej, więc poniższe odpowiedzi to ogólny obraz. Napiszcie, o jakim spektaklu czy współpracy myślicie, a odpowiem konkretnie.</p>
+<div class="faq reveal">
+<details><summary data-en="How is theatre photography different from regular event photography?">Czym różni się fotografia teatralna od zwykłej fotografii eventowej?</summary><p data-en="Theatre has its own rules: the light shifts constantly, actors won't repeat a moment on request, and the key beat often lasts a split second. I shoot it from the inside, knowing the rhythm of rehearsal and performance, not from the side like a random spectator.">Teatr rządzi się swoimi prawami: światło zmienia się co chwilę, aktorzy nie powtórzą ujęcia na życzenie, a najważniejszy moment często trwa ułamek sekundy. Fotografuję to od środka, znając rytm próby i spektaklu, nie z boku jak przypadkowy widz.</p></details>
+<details><summary data-en="Do you shoot only premieres, or rehearsals too?">Fotografujesz tylko premiery, czy też próby?</summary><p data-en="Both. The most interesting frames often come from rehearsals, before everything's polished, that's where you see the real work, not just the final effect.">Jedno i drugie. Najciekawsze kadry często rodzą się na próbach, zanim jeszcze wszystko jest dopięte, tam widać prawdziwą pracę, nie tylko efekt końcowy.</p></details>
+<details><summary data-en="How do you handle poor stage lighting?">Jak radzisz sobie ze słabym światłem na scenie?</summary><p data-en="That's just how theatre is, so I shoot without flash to avoid disturbing the performance, and rely on gear that holds up in low light. The Nikon Z9 forgives a lot here.">To codzienność teatru, więc pracuję bez lampy błyskowej, żeby nie zakłócać spektaklu, i polegam na sprzęcie, który daje radę przy niskim świetle. Nikon Z9 wybacza mi tu bardzo dużo.</p></details>
+<details><summary data-en="How many photos does the theatre get from one performance?">Ile zdjęć dostaje teatr z jednego spektaklu?</summary><p data-en="Enough to tell the whole performance, poster, press materials and social media, without repeating the same scene twice. We agree on the scope together, based on what the photos are for.">Tyle, żeby dało się nimi opowiedzieć cały spektakl, plakat, materiały prasowe i social media, bez powtarzalnych ujęć tej samej sceny. Zakres ustalamy razem, zależnie od tego, do czego zdjęcia mają posłużyć.</p></details>
+<details><summary data-en="How does the licence work, posters, media, the theatre's social media?">Jak wygląda licencja na wykorzystanie zdjęć, plakaty, media, social media teatru?</summary><p data-en="We settle that as part of the collaboration, using a photo on a poster and a billboard is different from one social media post. Just tell me where the photos will appear.">Ustalamy to przy współpracy, bo inaczej wygląda użycie na plakacie i billboardzie, a inaczej jeden post w social media. Powiedzcie, gdzie zdjęcia mają się pojawić.</p></details>
+<details><summary data-en="Is a long-term collaboration as resident photographer possible?">Czy możliwa jest stała współpraca jako fotograf rezydent?</summary><p data-en="Yes, that's how I've worked with the Norwid Theatre for several years now, season after season. If you're looking for someone long-term, get in touch and we'll talk terms.">Tak, tak pracuję na przykład z Teatrem im. Norwida od kilku lat, sezon po sezonie. Jeśli szukacie kogoś na stałe, napiszcie, a porozmawiamy o warunkach takiej współpracy.</p></details>
+</div>
+</div>
+</section>
 <section class="cta-band">
 <div class="wrap">
 <h2 class="reveal" data-en="Let's create &lt;span class=&quot;it&quot;&gt;something together&lt;/span&gt;">Zróbmy coś <span class="it">razem</span></h2>
@@ -867,6 +938,21 @@ if(cf){ cf.addEventListener('submit',function(e){
 </div>
 </div>
 </section>
+<section>
+<div class="wrap">
+<div class="sec-label reveal" data-en="FAQ">Najczęstsze pytania</div>
+<h2 class="sec-title reveal" data-en='Before we &lt;span class="it"&gt;start the project&lt;/span&gt;'>Zanim <span class="it">ruszymy z projektem</span></h2>
+<p class="sec-intro reveal" data-en="Every company and every team has different needs, so these answers are a general picture, not a price list. Tell me what you have in mind and I'll answer with specifics.">Każda firma i każdy zespół mają inne potrzeby, więc poniższe odpowiedzi to ogólny obraz, nie cennik. Napiszcie, o czym myślicie, a odpowiem konkretnie.</p>
+<div class="faq reveal">
+<details><summary data-en="How is your brand portrait different from a regular photo session?">Czym różni się u Ciebie portret wizerunkowy od zwykłej sesji zdjęciowej?</summary><p data-en="I don't do stiff poses against a grey backdrop. I talk to you before the session, so the photo shows who you really are at work, not someone playing themselves for the camera.">Nie ustawiam sztywnych póz przy szarym tle. Rozmawiam z Wami przed sesją, żeby zdjęcie pokazywało, kim naprawdę jesteście w pracy, nie kogoś, kto gra samego siebie przed obiektywem.</p></details>
+<details><summary data-en="How many people can you photograph in one company session?">Ile osób możesz sfotografować podczas jednej sesji firmowej?</summary><p data-en="From a single executive portrait to the whole team. Bigger groups just need more time, we figure out together how many people and roles you want covered.">Od pojedynczego portretu zarządu po cały zespół. Przy większych grupach po prostu potrzebujemy więcej czasu, to ustalamy razem, ile osób i ile stanowisk chcecie objąć.</p></details>
+<details><summary data-en="Do you shoot only people, or also interiors and products?">Fotografujesz tylko ludzi, czy też wnętrza i produkty firmy?</summary><p data-en="Both, and often together, a chef's portrait in their own restaurant says more than one against a white wall. Interiors, details, people at work, whatever builds the brand's image.">Jedno i drugie, i często razem, bo portret szefa kuchni w jego restauracji mówi więcej niż portret na białym tle. Wnętrza, detale, ludzie przy pracy, wszystko, co buduje obraz marki.</p></details>
+<details><summary data-en="What are the terms for using the photos, ads, social media, press?">Na jakich zasadach mogę wykorzystać zdjęcia, reklama, social media, prasa?</summary><p data-en="We settle that when quoting, because the scope of use affects the price, using a photo on Instagram is different from a nationwide billboard. Tell me where the photos will appear and I'll set the licence accordingly.">Ustalamy to przy wycenie, bo zakres wykorzystania wpływa na cenę, inaczej wygląda użycie na Instagramie, a inaczej na billboardzie w całym kraju. Powiedzcie, gdzie zdjęcia mają się pojawić, dobiorę licencję pod to.</p></details>
+<details><summary data-en="How is a business session priced?">Jak wygląda wycena sesji biznesowej?</summary><p data-en="It depends on scope: number of people, location, number of days. I'd rather hear what you have in mind than guess a range, a single portrait session and a campaign for a hotel chain are entirely different budgets.">Zależy od zakresu: liczby osób, lokalizacji, liczby dni. Wolę usłyszeć, co macie na myśli, niż strzelać widełkami, bo sesja portretowa dla jednej osoby i kampania dla sieci hoteli to zupełnie inne budżety.</p></details>
+<details><summary data-en="How long until we get the finished material?">Ile czekamy na gotowy materiał?</summary><p data-en="We set the deadline together at the start, especially if the photos are going into a specific campaign or publication on a set date. You'll know exactly when to expect them.">Termin ustalamy na starcie razem z Wami, zwłaszcza jeśli zdjęcia mają wejść do konkretnej kampanii czy publikacji w określonym czasie. Wiecie dokładnie, na kiedy je macie.</p></details>
+</div>
+</div>
+</section>
 <section class="cta-band">
 <div class="wrap">
 <h2 class="reveal" data-en="Let's create &lt;span class=&quot;it&quot;&gt;something together&lt;/span&gt;">Zróbmy coś <span class="it">razem</span></h2>
@@ -888,6 +974,28 @@ if(cf){ cf.addEventListener('submit',function(e){
 <h2 class="sec-title reveal" data-en='The place in &lt;span class="it"&gt;the frame&lt;/span&gt;'>Miejsce w <span class="it">kadrze</span></h2>
 <p class="sec-intro reveal" data-en="A hotel is a promise and the interior keeps it. I photograph spaces so that light, texture and atmosphere sell the stay before the guest even walks in.">Hotel to obietnica, a wnętrze ją składa. Fotografuję przestrzenie tak, żeby światło, faktura i klimat sprzedawały pobyt, zanim gość przekroczy próg.</p>
 <div class="masonry"><!--GALLERY:hotele--></div>
+</div>
+</section>
+<section style="background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+<div class="wrap">
+<div class="sec-label reveal" data-en="FAQ">Najczęstsze pytania</div>
+<h2 class="sec-title reveal" data-en='Before we &lt;span class="it"&gt;set a date&lt;/span&gt;'>Zanim <span class="it">umówimy termin</span></h2>
+<p class="sec-intro reveal" data-en="Every property has a different layout, light and needs, so these answers are a starting point for a conversation. Tell me about your property and I'll answer with specifics.">Każdy obiekt ma inny układ, inne światło i inne potrzeby, więc poniższe odpowiedzi to punkt wyjścia do rozmowy. Napiszcie, jaki macie obiekt, a odpowiem konkretnie.</p>
+<div class="faq reveal">
+<details><summary data-en="How long does a hotel or restaurant session take?">Ile czasu zajmuje sesja hotelu lub restauracji?</summary><p data-en="Depends on the number of rooms, halls, and whether we also shoot food and staff at work. We plan it in hours or days, depending on the size of the property.">Zależy od liczby pokoi, sal i tego, czy fotografujemy też jedzenie i ludzi przy pracy. Rozkładamy to na godziny albo dni, w zależności od wielkości obiektu.</p></details>
+<details><summary data-en="What time of day do you photograph interiors?">O jakiej porze dnia fotografujesz wnętrza?</summary><p data-en="Usually at dawn or dusk, that's when light does half the work for me. Sometimes it means coming twice, once for natural daylight, once for the evening mood.">Najczęściej o świcie albo o zmierzchu, wtedy światło robi połowę roboty za mnie. Czasem trzeba przyjechać dwa razy, raz na naturalne światło dnia, raz na klimat wieczoru.</p></details>
+<details><summary data-en="Do you shoot with a drone too?">Fotografujesz też z drona?</summary><p data-en="Yes, if the property benefits from it, like a mountain or lakeside setting. Just mention it when we're quoting and we'll see if it makes sense for your location.">Tak, jeśli obiekt na tym zyskuje, np. położenie w górach czy przy jeziorze. Powiedzcie na etapie wyceny, czy to ma sens dla Waszej lokalizacji.</p></details>
+<details><summary data-en="How many photos will we get from a hotel session?">Ile zdjęć dostaniemy z sesji hotelowej?</summary><p data-en="As many as it takes for every important space to have its best shot, usually a few per room or hall. We agree on the scope together, based on how many spaces you want to show.">Tyle, ile potrzeba, żeby każda ważna przestrzeń miała swoje najlepsze ujęcie, zwykle po kilka na pokój czy salę. Ustalamy zakres razem, zależnie od tego, ile miejsc chcecie pokazać.</p></details>
+<details><summary data-en="How is a property with many rooms or halls priced?">Jak wygląda wycena dla obiektu z wieloma pokojami czy salami?</summary><p data-en="I price it by scope, not a fixed per-room rate, a suite with a view and a standard room aren't the same job. Tell me how much space you want covered and you'll get a real quote.">Liczę to według zakresu, nie według sztywnej stawki za pokój, bo apartament z widokiem i pokój standardowy to co innego. Napiszcie, ile przestrzeni chcecie objąć, dostaniecie realną wycenę.</p></details>
+<details><summary data-en="How long until we get the finished material?">Ile czekamy na gotowy materiał?</summary><p data-en="We agree on a deadline together at the start, especially if the photos need to go live on your website or booking system by a specific date.">Termin ustalamy razem na starcie, szczególnie jeśli zdjęcia mają wejść na stronę czy do systemu rezerwacji na konkretną datę.</p></details>
+</div>
+</div>
+</section>
+<section class="cta-band">
+<div class="wrap">
+<h2 class="reveal" data-en="Let's create &lt;span class=&quot;it&quot;&gt;something together&lt;/span&gt;">Zróbmy coś <span class="it">razem</span></h2>
+<p class="reveal" data-en="Tell me what you want to capture and I will suggest how to do it best.">Napisz, co chcesz uwiecznić, a ja podpowiem, jak to najlepiej zrobić.</p>
+<a class="btn reveal" data-en="Contact" href="kontakt.html">Kontakt</a>
 </div>
 </section>
 </div><div class="ppage" data-page="prywatnosc.html">
