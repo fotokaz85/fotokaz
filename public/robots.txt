@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /prywatnosc.html
+Disallow: /prywatnosc
 Disallow: /en/prywatnosc.html
+Disallow: /en/prywatnosc
 Disallow: /admin/
 
 Sitemap: https://fotokaz.pl/sitemap.xml

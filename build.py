@@ -192,6 +192,11 @@ def footer_html(lang):
     return f'<footer><div class="wrap">\n  <div class="logo">foto<span>kaz</span></div>\n  <div class="tag">{tag}</div>\n  <div class="fnav">{fn}</div>\n  <div class="fnav" style="margin-top:4px"><a href="prywatnosc.html">{priv}</a></div>{badge}\n  <div class="copy">{copy}</div>\n</div></footer>'
 
 SCRIPT=open(os.path.join(HERE,"_script.html"),encoding="utf-8").read()
+
+def curl(pref,page):
+    """Kanoniczny adres bez .html (Cloudflare Pages przekierowuje /x.html na /x)."""
+    if page=="index.html": return f"{DOMAIN}/{pref}"
+    return f"{DOMAIN}/{pref}{page[:-5] if page.endswith('.html') else page}"
 CF_BEACON='<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "b5c6156c6e534dadba41b69f80ecd1e0"}\'></script><!-- End Cloudflare Web Analytics -->'
 
 def jsonld(page,lang,inner_html=""):
@@ -199,7 +204,7 @@ def jsonld(page,lang,inner_html=""):
     biz='{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marcin Kaźmieruk Fotografia","image":"%s/images/sluby/12.webp","@id":"%s/#business","url":"%s/","telephone":"+48505183969","email":"info@fotokaz.pl","address":{"@type":"PostalAddress","streetAddress":"ul. Podgórze 1A/1","addressLocality":"Jelenia Góra","postalCode":"58-500","addressRegion":"Dolny Śląsk","addressCountry":"PL"},"areaServed":["PL","Europe"],"priceRange":"$$$","sameAs":["https://www.facebook.com/marcin4funphotos","https://www.instagram.com/marcin4funphotos","https://www.instagram.com/fotofoodie"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"133","bestRating":"5"},"founder":{"@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","award":["#1 Foodelia 2025","IPA 2026","Flash Masters Top 10","Two Mann Studios Scholarship","Osobowość Roku 2025 Jelenia Góra"]},"knowsAbout":["fotografia kulinarna","fotografia komercyjna","fotografia eventowa","fotografia ślubna","fotografia teatralna"]}'%(b,b,b)
     out=[biz]
     if page=="o-mnie.html":
-        out.append('{"@context":"https://schema.org","@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","url":"%s/o-mnie.html","knowsLanguage":["pl","en"]}'%b)
+        out.append('{"@context":"https://schema.org","@type":"Person","name":"Marcin Kaźmieruk","jobTitle":"Fotograf","url":"%s/o-mnie","knowsLanguage":["pl","en"]}'%b)
     if inner_html and "faq" in inner_html:
         fsoup=BeautifulSoup(inner_html,"html.parser")
         qas=[]
@@ -227,11 +232,11 @@ def build(page,lang):
         inner=inner.replace(f'<!--GALLERY_MORE:{cat}-->', render_gallery_more_btn(cat))
     if lang=="en":
         inner=re.sub(r'(src|href)="images/', r'\1="../images/', inner)
-        cssref=f"../style.css?v={CSS_VER}"; canon=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}"); loc="en_GB"; hl="en"
-        alt_pl=(f"{DOMAIN}/" if page=="index.html" else f"{DOMAIN}/{page}"); alt_en=canon
+        cssref=f"../style.css?v={CSS_VER}"; canon=curl("en/",page); loc="en_GB"; hl="en"
+        alt_pl=curl("",page); alt_en=canon
     else:
-        cssref=f"style.css?v={CSS_VER}"; canon=(f"{DOMAIN}/" if page=="index.html" else f"{DOMAIN}/{page}"); loc="pl_PL"; hl="pl"
-        alt_pl=canon; alt_en=(f"{DOMAIN}/en/" if page=="index.html" else f"{DOMAIN}/en/{page}")
+        cssref=f"style.css?v={CSS_VER}"; canon=curl("",page); loc="pl_PL"; hl="pl"
+        alt_pl=canon; alt_en=curl("en/",page)
     ogimg=f"{DOMAIN}/images/food/51.webp"
     robots='<meta name="robots" content="noindex,follow">' if cfg.get("noindex") else '<meta name="robots" content="index,follow,max-image-preview:large">'
     doc=f'''<!DOCTYPE html>
@@ -283,11 +288,11 @@ urls=[]
 for page in pages_cfg:
     if pages_cfg[page].get("noindex"): continue   # np. prywatnosc.html, zablokowana w robots.txt
     for pref in ("","en/"):
-        loc=(f"{DOMAIN}/{pref}" if page=="index.html" else f"{DOMAIN}/{pref}{page}")
+        loc=curl(pref,page)
         pr="1.0" if page=="index.html" else "0.8"
         urls.append(f"  <url><loc>{loc}</loc><changefreq>monthly</changefreq><priority>{pr}</priority></url>")
 open(os.path.join(OUT,"sitemap.xml"),"w",encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"\n".join(urls)+"\n</urlset>\n")
-open(os.path.join(OUT,"robots.txt"),"w",encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /prywatnosc.html\nDisallow: /en/prywatnosc.html\nDisallow: /admin/\n\nSitemap: {DOMAIN}/sitemap.xml\n")
+open(os.path.join(OUT,"robots.txt"),"w",encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /prywatnosc.html\nDisallow: /prywatnosc\nDisallow: /en/prywatnosc.html\nDisallow: /en/prywatnosc\nDisallow: /admin/\n\nSitemap: {DOMAIN}/sitemap.xml\n")
 
 # ---- strona 404 ----
 def page_404(lang):
